@@ -1,0 +1,584 @@
+@import "../libs/fontawesome-free-5.15.1-web/css/all.css";
+@charset "UTF-8";
+
+$size16: clamp(12px, 1.7vw, 16px);
+$size20: clamp(16px, 1.7vw, 20px);
+$size28: clamp(16px, 1.7vw, 28px);
+$size30: clamp(18px, 1.7vw, 30px);
+$size35: clamp(20px, 1.7vw, 35px);
+$size38: clamp(28px, 1.7vw, 38px);
+$size80: clamp(50px, 5vw, 80px);
+
+$items: 4;
+$transition-duration: 0.5s;
+$transition-delay: 0.05s;
+
+$whitetext: #fff;
+$lightfiol: #9D11CE;
+$bgfiolmountain: #D50181;
+$fioltext: #560188;
+$shadowfiol: rgba(86, 1, 136, 1);
+$darkfiol: #2A0252;
+$blacktext: #404040;
+$yellowtext: #EFF121;
+$yellowtext2: #ffcb17;
+
+$colorvk: #4a76a8;
+$colorfb: #1877f2;
+$colortw: #1da1f2;
+$colorok: #F2720C;
+$colorinst: #c32aa3;
+$coloryt: #ff0000;
+$colortg: #0088cc;
+$colorwa: #25d366;
+
+$menubgcolor: #F8E9FC;
+$gradientHW: transparent linear-gradient(145deg, #3C016D 0%, #D060F2 100%) 0% 0% no-repeat padding-box;
+$gradientWh: transparent linear-gradient(104deg, #3C016D 0%, #D060F2 100%) 0% 0% no-repeat padding-box;
+
+@mixin flex {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+@mixin flex-shrink($num) {
+  -ms-flex-negative: $num;
+  flex-shrink: $num;
+}
+@mixin flex-rowdirection {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+@mixin flex-rowrdirection {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+@mixin flex-coldirection{
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+@mixin flex-colrdirection {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+@mixin flex-nowrap {
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+@mixin flex-wrap {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+@mixin justify-content-start {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+@mixin justify-content-end {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+@mixin justify-content-center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+@mixin justify-content-between{
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+@mixin justify-content-around {
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+@mixin justfy-content-evenly {
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+@mixin align-items-start {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+@mixin align-items-end {
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+@mixin align-items-center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+@mixin align-items-stretch {
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+@mixin align-items-baseline {
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+@mixin mediaMaxW($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+@mixin mediaMinW($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+@mixin mediaMaxH($height) {
+  @media screen and (max-height: $height) {
+    @content;
+  }
+}
+
+@font-face {
+  font-family: "OpenSans-Bold";
+  src: url("../fonts/OpenSans-Bold.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OpenSans-BoldItalic";
+  src: url("../fonts/OpenSans-BoldItalic.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OpenSans-ExtraBold";
+  src: url("../fonts/OpenSans-ExtraBold.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OpenSans-ExtraBoldItalic";
+  src: url("../fonts/OpenSans-ExtraBoldItalic.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OpenSans-Italic";
+  src: url("../fonts/OpenSans-Italic.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OpenSans-Light";
+  src: url("../fonts/OpenSans-Light.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OpenSans-LightItalic";
+  src: url("../fonts/OpenSans-LightItalic.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OpenSans-Regular";
+  src: url("../fonts/OpenSans-Regular.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OpenSans-SemiBold";
+  src: url("../fonts/OpenSans-SemiBold.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+@mixin paddingposition(){
+  padding: 0px 5vw;
+  @include mediaMaxW(1368px){
+    padding: 0px 3vw;
+  }
+}
+
+@mixin linkstyle($size){
+  color: $whitetext;
+  font-family: 'OpenSans-SemiBold';
+  font-size: $size;
+  transition: .8s;
+  text-decoration: none;
+  line-height: 1.2;
+  &:hover{
+    color: $yellowtext;
+  }
+}
+
+@mixin stylebutton {
+  padding: clamp(5px, 0.8vw, 15px) clamp(10px, 1.5vw, 29px);
+  background: $gradientWh;
+  color: $whitetext;
+  font-size: $size20;
+  border-radius: 30px;
+  text-decoration: none;
+  font-family: 'OpenSans-SemiBold';
+  transition: .8s;
+  width: fit-content;
+  border: none;
+  &:hover{
+    color: $yellowtext;
+  }
+}
+
+@mixin styletitle{
+  color: $fioltext;
+  font-size: $size38;
+  position: relative;
+  font-weight: 600;
+  &:before {
+    content: "";
+    border-bottom: 2px solid $yellowtext;
+    border-top: 2px solid $yellowtext;
+    width: 40px;
+    height: 14px;
+    position: absolute;
+    top: calc(0.45em - 1px);
+    margin-left: -50px;
+
+  }
+  &:after {
+    content: "";
+    border-bottom: 2px solid $yellowtext;
+    border-top: 2px solid $yellowtext;
+    width: 40px;
+    height: 14px;
+    position: absolute;
+    top: calc(0.45em - 1px);
+    margin-left: 10px;
+  }
+}
+
+@mixin stylesociallink($color){
+  @include flex();
+  @include align-items-center();
+  background: $whitetext;
+  padding: 13px 23px;
+  font-size: $size20;
+  color: $blacktext;
+  border-radius: 30px;
+  text-decoration: none;
+  .social-icon{
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-left: 10px;
+    background: $color;
+    svg{
+      color: $whitetext;
+      font-size: $size20;
+    }
+    span{
+      margin-left: 5px;
+      color: $whitetext;
+      font-size: $size20;
+    }
+  }
+}
+
+@mixin styletext(){
+  text-align: left;
+  width: 100%;
+  color: $blacktext;
+  font-size: $size16;
+  line-height: 1.2;
+  padding: .5vw 0;
+}
+
+@mixin styleinput{
+  width: 100%;
+  margin: 5px 0px;
+  padding: 0 15px;
+  height: 40px;
+  background: gainsboro;
+  border: none;
+  border-radius: 5px;
+  &:focus {
+    outline: $darkfiol 1px;
+    border: 1px solid $darkfiol;
+  }
+  &:invalid{
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+}
+
+@mixin styletextarea{
+  resize: none;
+  height: 65px;
+  padding: 5px 15px 5px 15px;
+  margin: 5px 0px;
+  outline: 0;
+  width: 100%;
+  background: gainsboro;
+  border: none;
+  border-radius: 5px;
+  &:focus{
+    border: 1px solid $darkfiol;
+  }
+  @media (prefers-color-scheme: light) {
+    @include stylescroll($yellowtext2,$whitetext);
+  }
+  @media (prefers-color-scheme: dark) {
+    @include stylescroll($yellowtext,$whitetext);
+  }
+}
+
+@mixin stylescroll($color, $color2){
+  overflow-x: hidden !important;
+  overflow: auto;
+  &::-webkit-scrollbar-button {
+    background-image:url('');
+    background-repeat:no-repeat;
+    width:6px;
+    height:0px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $color2;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    background-color: $color;
+    box-shadow:0px 1px 1px #fff inset;
+    background-image:url('https://yraaa.ru/_pu/24/59610063.png');
+    background-position:center;
+    background-repeat:no-repeat;
+  }
+
+  &::-webkit-resizer{
+    background-image:url('');
+    background-repeat:no-repeat;
+    width:7px;
+    height:0px;
+  }
+
+  &::-webkit-scrollbar{
+    width: 11px;
+  }
+}
+
+%dialog-box {
+  border-radius: 1em;
+  color: $whitetext;
+  margin: 5% auto;
+  max-width: 25em;
+  padding: 2em;
+  position: relative;
+  width: 95%;
+
+  &:before {
+    background: $whitetext;
+    content: attr(data-title);
+    left: 50%;
+    padding: 0 1em;
+    position: absolute;
+    text-transform: uppercase;
+    top: -0.9em;
+    text-align: center;
+    transform: translateX(-50%);
+  }
+}
+
+@mixin dialog-box ($color: $fioltext){
+  @extend %dialog-box;
+  border: 0.2em solid lighten($color,10%);
+  box-shadow:
+          inset 0 0 0.4em $color,
+          0 0 0.4em $color;
+
+  &:before {
+    border-left: 0.2em solid lighten($color,10%);
+    border-right: 0.2em solid lighten($color,10%);
+    color: lighten($color, 30%);
+    text-shadow: 0 0 0.4em $color;
+  }
+}
+
+@mixin styletabs(){
+  .tabs {
+    @include flex();
+    @include flex-wrap();
+    @include justify-content-around();
+  }
+  .tabs label {
+    order: 1; // Put the labels first
+    margin-right: 0.2rem;
+    background: #90CAF9;
+    font-weight: bold;
+    background: $gradientWh;
+    color: $whitetext;
+    font-size: $size20;
+    border-radius: 30px;
+    text-decoration: none;
+    font-family: 'OpenSans-SemiBold';
+    transition: .8s;
+    cursor: pointer;
+    @include flex();
+    @include justify-content-end();
+    @include flex-rowrdirection();
+    @include align-items-center();
+    width: max-content;
+    position: relative;
+    padding: clamp(5px, 0.8vw, 15px) clamp(25px, 2vw, 35px) clamp(5px, 0.8vw, 15px) clamp(10px, 1.5vw, 29px);
+  }
+  .tabs .tab {
+    order: 99; // Put the tabs last
+    flex-grow: 1;
+    width: 100%;
+    display: none;
+    padding: 1rem;
+    background: #fff;
+    margin-top: 1rem;
+  }
+  .tabs input[type="radio"] {
+    display: none;
+  }
+  .tabs input[type="radio"]:checked + label {
+    color: $yellowtext;
+  }
+  .tabs input[type="radio"]:checked + label + .tab {
+    display: block;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body{
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #fff !important;
+    font-family: 'OpenSans-Regular';
+    @include stylescroll($yellowtext2,$darkfiol);
+  }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  body{
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #fff !important;
+    font-family: 'OpenSans-Regular';
+    @include stylescroll($yellowtext,$darkfiol);
+    /*main{
+      background-repeat: no-repeat;
+      background-position: 50% 20%;
+      background-size: cover;
+      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 20%), linear-gradient(0deg, #1F1F1B 0%, rgba(31, 31, 27, 0) 30%), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../img/i.webp");
+    }*/
+  }
+}
+label{
+  margin: 0;
+}
+ul,li,ol{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  border: none;
+  margin: 0;
+  padding: 0;
+  position: unset;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.2;
+  &::before {
+    content: none;
+  }
+  &::after {
+    content: none;
+  }
+}
+
+.lost-image-min {
+  font-family: 'Helvetica';
+  font-weight: 300;
+  line-height: 1.2;
+  text-align: center;
+  font-size: 1px;
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  min-height: 50px;
+
+  &:after {
+    content: "\f127" " Картинка потерялась" /*attr(alt)*/
+  ;
+    display: block;
+    font-size: 16px;
+    font-style: normal;
+    font-family: "Font Awesome 5 Free";
+    color: rgb(100, 100, 100);
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    height: auto;
+    background-color: rgb(230, 230, 230);
+    border: 2px dotted rgb(200, 200, 200);
+    border-radius: 5px;
+  }
+}
+
+.lost-image {
+  font-family: 'Helvetica';
+  font-weight: 300;
+  line-height: 1.2;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  min-height: 50px;
+  content: " ";
+  display: block;
+
+  &:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 0;
+    height: calc(100% + 40px);
+    width: 100%;
+    background-color: rgb(230, 230, 230);
+    border: 2px dotted rgb(200, 200, 200);
+    border-radius: 5px;
+  }
+
+  &:after {
+    content: " Наша картинка " attr(alt) " потерялась, мы скоро все исправим :) ";
+    display: block;
+    font-size: 16px;
+    font-style: normal;
+    font-family: "Font Awesome 5 Free";
+    color: rgb(100, 100, 100);
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+}

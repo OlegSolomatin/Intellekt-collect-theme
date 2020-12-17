@@ -1,0 +1,9 @@
+@import "galaxyvariablesstyle.scss";
+
+header {
+  width: 100%;
+  padding: 0px 0px 70px;
+  @include flex();
+  @include justify-content-center();
+  @include align-items-center();
+}

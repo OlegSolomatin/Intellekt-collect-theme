@@ -1,0 +1,19 @@
+@import "galaxyvariablesstyle.scss";
+
+footer{
+  width: 100%;
+  padding: 0px 0px 70px;
+  @include flex();
+  @include justify-content-center();
+  @include align-items-center();
+  .container-footer{
+    @include paddingposition();
+    max-width: 1920px;
+    width: 100%;
+    @include flex();
+    @include justify-content-center();
+    @include align-items-center();
+    @include flex-coldirection();
+    position: relative;
+  }
+}

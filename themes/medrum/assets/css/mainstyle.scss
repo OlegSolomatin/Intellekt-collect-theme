@@ -1,0 +1,10 @@
+@import "galaxyvariablesstyle.scss";
+@charset "UTF-8";
+
+main{
+ @include flex();
+ @include flex-coldirection();
+ @include align-items-center();
+ @include justify-content-center();
+
+}

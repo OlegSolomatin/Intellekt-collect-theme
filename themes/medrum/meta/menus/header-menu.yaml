@@ -1,0 +1,63 @@
+items:
+    -
+        title: Главная
+        nesting: null
+        type: cms-page
+        url: null
+        code: ''
+        reference: main
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Услуги
+        nesting: null
+        type: cms-page
+        url: null
+        code: ''
+        reference: services
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Должникам
+        nesting: null
+        type: cms-page
+        url: null
+        code: ''
+        reference: debtors
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'О нас'
+        nesting: null
+        type: cms-page
+        url: null
+        code: ''
+        reference: aboutus
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Контакты
+        type: cms-page
+        code: ''
+        reference: contacts
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+name: header-menu

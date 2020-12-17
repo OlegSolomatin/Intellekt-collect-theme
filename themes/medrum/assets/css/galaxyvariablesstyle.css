@@ -1,0 +1,145 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "OpenSans-Bold";
+  src: url("../fonts/OpenSans-Bold.woff2") format("woff2");
+  /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "OpenSans-BoldItalic";
+  src: url("../fonts/OpenSans-BoldItalic.woff2") format("woff2");
+  /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "OpenSans-ExtraBold";
+  src: url("../fonts/OpenSans-ExtraBold.woff2") format("woff2");
+  /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "OpenSans-ExtraBoldItalic";
+  src: url("../fonts/OpenSans-ExtraBoldItalic.woff2") format("woff2");
+  /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "OpenSans-Italic";
+  src: url("../fonts/OpenSans-Italic.woff2") format("woff2");
+  /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "OpenSans-Light";
+  src: url("../fonts/OpenSans-Light.woff2") format("woff2");
+  /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "OpenSans-LightItalic";
+  src: url("../fonts/OpenSans-LightItalic.woff2") format("woff2");
+  /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "OpenSans-Regular";
+  src: url("../fonts/OpenSans-Regular.woff2") format("woff2");
+  /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "OpenSans-SemiBold";
+  src: url("../fonts/OpenSans-SemiBold.woff2") format("woff2");
+  /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal; }
+body {
+  margin: 0;
+  padding: 0; }
+
+label {
+  margin: 0; }
+
+ul, li, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  border: none;
+  margin: 0;
+  padding: 0;
+  position: unset;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.2; }
+  h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
+    content: none; }
+  h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
+    content: none; }
+
+.lost-image-min {
+  font-family: 'Helvetica';
+  font-weight: 300;
+  line-height: 1.2;
+  text-align: center;
+  font-size: 1px;
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  min-height: 50px; }
+  .lost-image-min:after {
+    content: "" " ╨Ъ╨░╤А╤В╨╕╨╜╨║╨░ ╨┐╨╛╤В╨╡╤А╤П╨╗╨░╤Б╤М";
+    display: block;
+    font-size: 16px;
+    font-style: normal;
+    font-family: FontAwesome;
+    color: #646464;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    height: auto;
+    background-color: #e6e6e6;
+    border: 2px dotted #c8c8c8;
+    border-radius: 5px; }
+
+.lost-image {
+  font-family: 'Helvetica';
+  font-weight: 300;
+  line-height: 1.2;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  min-height: 50px;
+  content: " ";
+  display: block; }
+  .lost-image:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 0;
+    height: calc(100% + 40px);
+    width: 100%;
+    background-color: #e6e6e6;
+    border: 2px dotted #c8c8c8;
+    border-radius: 5px; }
+  .lost-image:after {
+    content: " ╨Э╨░╤И╨░ ╨║╨░╤А╤В╨╕╨╜╨║╨░ " attr(alt) " ╨┐╨╛╤В╨╡╤А╤П╨╗╨░╤Б╤М, ╨╝╤Л ╤Б╨║╨╛╤А╨╛ ╨▓╤Б╨╡ ╨╕╤Б╨┐╤А╨░╨▓╨╕╨╝ :) ";
+    display: block;
+    font-size: 16px;
+    font-style: normal;
+    font-family: FontAwesome;
+    color: #646464;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    text-align: center; }
+
+/*# sourceMappingURL=galaxyvariablesstyle.css.map */

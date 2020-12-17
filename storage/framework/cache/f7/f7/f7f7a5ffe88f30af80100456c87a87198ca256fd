@@ -1,0 +1,10 @@
+1608232450a:1:{s:12:"contacts.htm";a:9:{s:8:"fileName";s:12:"contacts.htm";s:7:"content";s:121:"title = "Контакты"
+url = "/contacts"
+layout = "default"
+is_hidden = 0
+==
+<div>
+    Контакты
+</div>";s:5:"mtime";i:1608231848;s:6:"markup";s:35:"<div>
+    Контакты
+</div>";s:4:"code";N;s:5:"title";s:16:"Контакты";s:3:"url";s:9:"/contacts";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";}}

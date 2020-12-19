@@ -6,7 +6,7 @@ footer{
   @include flex();
   @include justify-content-center();
   @include align-items-center();
-  .container-footer{
+  .container-footer-nav{
     @include paddingposition();
     max-width: 1920px;
     width: 100%;

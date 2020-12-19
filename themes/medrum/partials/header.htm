@@ -1,6 +1,16 @@
 [viewBag]
 ==
-<div>
+<div class="container-header-logo">
+1123123123123123
+</div>
+<input id="toggle" type="checkbox">
+<label class="toggle-container" for="toggle">
+    <span class="button button-toggle"></span>
+</label>
+<div class="container-header-nav nav">
+    {% for item in itemsmenu %}
+    <a class="nav-item" href="{{ item.url }}"><span>{{ item.title }}</span></a>
+    {% endfor %}
     {% for item in itemsmenu %}
     <a class="nav-item" href="{{ item.url }}"><span>{{ item.title }}</span></a>
     {% endfor %}

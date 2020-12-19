@@ -1,4 +1,4 @@
-1608232926a:1:{s:11:"default.htm";a:7:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:1613:"[staticPage]
+1608422481a:1:{s:11:"default.htm";a:7:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:1723:"[staticPage]
 useContent = 1
 default = 0
 
@@ -23,19 +23,21 @@ code = "header-menu"
     <script src="https://kit.fontawesome.com/7e4d23cf7d.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<header>
-    {% partial 'header' itemsmenu=headermenu.menuItems %}
-</header>
-<main>
-    {% page %}
-</main>
-<footer>
-    {% partial 'footer' %}
-</footer>
+<div class="main-container">
+    <header>
+        {% partial 'header' itemsmenu=headermenu.menuItems %}
+    </header>
+    <main>
+        {% page %}
+    </main>
+    <!--footer>
+        {% partial 'footer' itemsmenu=headermenu.menuItems %}
+    </footer-->
+</div>
 {% framework extras %}
 {% scripts %}
 </body>
-</html>";s:5:"mtime";i:1608232324;s:6:"markup";s:1517:"<!DOCTYPE html>
+</html>";s:5:"mtime";i:1608418971;s:6:"markup";s:1627:"<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8"/>
@@ -53,15 +55,17 @@ code = "header-menu"
     <script src="https://kit.fontawesome.com/7e4d23cf7d.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<header>
-    {% partial 'header' itemsmenu=headermenu.menuItems %}
-</header>
-<main>
-    {% page %}
-</main>
-<footer>
-    {% partial 'footer' %}
-</footer>
+<div class="main-container">
+    <header>
+        {% partial 'header' itemsmenu=headermenu.menuItems %}
+    </header>
+    <main>
+        {% page %}
+    </main>
+    <!--footer>
+        {% partial 'footer' itemsmenu=headermenu.menuItems %}
+    </footer-->
+</div>
 {% framework extras %}
 {% scripts %}
 </body>

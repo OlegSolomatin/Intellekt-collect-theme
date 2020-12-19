@@ -4,7 +4,6 @@
 main{
  @include flex();
  @include flex-coldirection();
- @include align-items-center();
- @include justify-content-center();
-
+ @include justify-content-start();
+ padding: 0 1vw;
 }

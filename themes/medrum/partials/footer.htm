@@ -1,3 +1,8 @@
 <div>
     Footer
+    <div class="container-footer-nav">
+        {% for item in itemsmenu %}
+        <a class="nav-item" href="{{ item.url }}"><span>{{ item.title }}</span></a>
+        {% endfor %}
+    </div>
 </div>

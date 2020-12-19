@@ -41,4 +41,5 @@
   'Rainlab\\Pages\\FormWidgets\\MenuItemSearch' => 'plugins\\rainlab\\pages\\formwidgets\\MenuItemSearch.php',
   'RainLab\\Pages\\Classes\\Controller' => 'plugins\\rainlab\\pages\\classes\\Controller.php',
   'RainLab\\Pages\\Classes\\MenuItemReference' => 'plugins\\rainlab\\pages\\classes\\MenuItemReference.php',
+  'backend\\Controllers\\media' => 'modules\\backend\\controllers\\media.php',
 );

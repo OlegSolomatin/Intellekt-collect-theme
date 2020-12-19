@@ -23,15 +23,17 @@ code = "header-menu"
     <script src="https://kit.fontawesome.com/7e4d23cf7d.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<header>
-    {% partial 'header' itemsmenu=headermenu.menuItems %}
-</header>
-<main>
-    {% page %}
-</main>
-<footer>
-    {% partial 'footer' %}
-</footer>
+<div class="main-container">
+    <header>
+        {% partial 'header' itemsmenu=headermenu.menuItems %}
+    </header>
+    <main>
+        {% page %}
+    </main>
+    <!--footer>
+        {% partial 'footer' itemsmenu=headermenu.menuItems %}
+    </footer-->
+</div>
 {% framework extras %}
 {% scripts %}
 </body>

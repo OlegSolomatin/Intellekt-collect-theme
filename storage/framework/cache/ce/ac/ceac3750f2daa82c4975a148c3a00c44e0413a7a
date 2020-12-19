@@ -1,5 +1,15 @@
-1608232837a:1:{s:10:"footer.htm";a:5:{s:8:"fileName";s:10:"footer.htm";s:7:"content";s:25:"<div>
+1608422481a:1:{s:10:"footer.htm";a:5:{s:8:"fileName";s:10:"footer.htm";s:7:"content";s:221:"<div>
     Footer
-</div>";s:5:"mtime";i:1608231541;s:6:"markup";s:25:"<div>
+    <div class="container-footer-nav">
+        {% for item in itemsmenu %}
+        <a class="nav-item" href="{{ item.url }}"><span>{{ item.title }}</span></a>
+        {% endfor %}
+    </div>
+</div>";s:5:"mtime";i:1608413192;s:6:"markup";s:221:"<div>
     Footer
+    <div class="container-footer-nav">
+        {% for item in itemsmenu %}
+        <a class="nav-item" href="{{ item.url }}"><span>{{ item.title }}</span></a>
+        {% endfor %}
+    </div>
 </div>";s:4:"code";N;}}

@@ -29,7 +29,7 @@ class __TwigTemplate_f82dd4c2ed03f827bac6aed9f409565d67bfd34b84c0347a954e5b07241
         $this->blocks = [
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
-        $tags = array("styles" => 11, "partial" => 20, "page" => 23, "framework" => 28, "scripts" => 29);
+        $tags = array("styles" => 11, "partial" => 21, "page" => 24, "framework" => 30, "scripts" => 31);
         $filters = array("escape" => 6, "theme" => 10);
         $functions = array();
 
@@ -98,31 +98,34 @@ class __TwigTemplate_f82dd4c2ed03f827bac6aed9f409565d67bfd34b84c0347a954e5b07241
     <script src=\"https://kit.fontawesome.com/7e4d23cf7d.js\" crossorigin=\"anonymous\"></script>
 </head>
 <body>
-<header>
-    ";
-        // line 20
+<div class=\"main-container\">
+    <header>
+        ";
+        // line 21
         $context['__cms_partial_params'] = [];
-        $context['__cms_partial_params']['itemsmenu'] = twig_get_attribute($this->env, $this->source, ($context["headermenu"] ?? null), "menuItems", [], "any", false, false, true, 20)        ;
+        $context['__cms_partial_params']['itemsmenu'] = twig_get_attribute($this->env, $this->source, ($context["headermenu"] ?? null), "menuItems", [], "any", false, false, true, 21)        ;
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("header"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 21
-        echo "</header>
-<main>
-    ";
-        // line 23
-        echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
+        // line 22
+        echo "    </header>
+    <main>
+        ";
         // line 24
-        echo "</main>
-<footer>
-    ";
-        // line 26
+        echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
+        // line 25
+        echo "    </main>
+    <!--footer>
+        ";
+        // line 27
         $context['__cms_partial_params'] = [];
+        $context['__cms_partial_params']['itemsmenu'] = twig_get_attribute($this->env, $this->source, ($context["headermenu"] ?? null), "menuItems", [], "any", false, false, true, 27)        ;
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("footer"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 27
-        echo "</footer>
-";
         // line 28
+        echo "    </footer-->
+</div>
+";
+        // line 30
         $_minify = System\Classes\CombineAssets::instance()->useMinify;
         if ($_minify) {
             echo '<script src="' . Request::getBasePath() . '/modules/system/assets/js/framework.combined-min.js"></script>'.PHP_EOL;
@@ -133,10 +136,10 @@ class __TwigTemplate_f82dd4c2ed03f827bac6aed9f409565d67bfd34b84c0347a954e5b07241
         }
         echo '<link rel="stylesheet" property="stylesheet" href="' . Request::getBasePath() .'/modules/system/assets/css/framework.extras'.($_minify ? '-min' : '').'.css">'.PHP_EOL;
         unset($_minify);
-        // line 29
+        // line 31
         echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('js');
         echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('scripts');
-        // line 30
+        // line 32
         echo "</body>
 </html>";
     }
@@ -153,7 +156,7 @@ class __TwigTemplate_f82dd4c2ed03f827bac6aed9f409565d67bfd34b84c0347a954e5b07241
 
     public function getDebugInfo()
     {
-        return array (  140 => 30,  137 => 29,  126 => 28,  123 => 27,  119 => 26,  115 => 24,  113 => 23,  109 => 21,  104 => 20,  96 => 15,  92 => 14,  88 => 13,  83 => 12,  80 => 11,  76 => 10,  69 => 6,  62 => 1,);
+        return array (  143 => 32,  140 => 31,  129 => 30,  125 => 28,  120 => 27,  116 => 25,  114 => 24,  110 => 22,  105 => 21,  96 => 15,  92 => 14,  88 => 13,  83 => 12,  80 => 11,  76 => 10,  69 => 6,  62 => 1,);
     }
 
     public function getSourceContext()
@@ -176,15 +179,17 @@ class __TwigTemplate_f82dd4c2ed03f827bac6aed9f409565d67bfd34b84c0347a954e5b07241
     <script src=\"https://kit.fontawesome.com/7e4d23cf7d.js\" crossorigin=\"anonymous\"></script>
 </head>
 <body>
-<header>
-    {% partial 'header' itemsmenu=headermenu.menuItems %}
-</header>
-<main>
-    {% page %}
-</main>
-<footer>
-    {% partial 'footer' %}
-</footer>
+<div class=\"main-container\">
+    <header>
+        {% partial 'header' itemsmenu=headermenu.menuItems %}
+    </header>
+    <main>
+        {% page %}
+    </main>
+    <!--footer>
+        {% partial 'footer' itemsmenu=headermenu.menuItems %}
+    </footer-->
+</div>
 {% framework extras %}
 {% scripts %}
 </body>

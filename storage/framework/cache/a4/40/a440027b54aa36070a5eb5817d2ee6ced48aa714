@@ -1,4 +1,4 @@
-1608422140a:1:{s:10:"header.htm";a:6:{s:8:"fileName";s:10:"header.htm";s:7:"content";s:530:"[viewBag]
+1608495563a:1:{s:10:"header.htm";a:6:{s:8:"fileName";s:10:"header.htm";s:7:"content";s:398:"[viewBag]
 ==
 <div class="container-header-logo">
 1123123123123123
@@ -11,10 +11,7 @@
     {% for item in itemsmenu %}
     <a class="nav-item" href="{{ item.url }}"><span>{{ item.title }}</span></a>
     {% endfor %}
-    {% for item in itemsmenu %}
-    <a class="nav-item" href="{{ item.url }}"><span>{{ item.title }}</span></a>
-    {% endfor %}
-</div>";s:5:"mtime";i:1608420193;s:6:"markup";s:515:"<div class="container-header-logo">
+</div>";s:5:"mtime";i:1608451454;s:6:"markup";s:383:"<div class="container-header-logo">
 1123123123123123
 </div>
 <input id="toggle" type="checkbox">
@@ -22,9 +19,6 @@
     <span class="button button-toggle"></span>
 </label>
 <div class="container-header-nav nav">
-    {% for item in itemsmenu %}
-    <a class="nav-item" href="{{ item.url }}"><span>{{ item.title }}</span></a>
-    {% endfor %}
     {% for item in itemsmenu %}
     <a class="nav-item" href="{{ item.url }}"><span>{{ item.title }}</span></a>
     {% endfor %}

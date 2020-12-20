@@ -29,13 +29,13 @@ class __TwigTemplate_02a7e7467651147a24830b6815e2186f4ab340a93bf8120263dc07aaa80
         $this->blocks = [
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
-        $tags = array();
+        $tags = array("partial" => 2);
         $filters = array();
         $functions = array();
 
         try {
             $this->sandbox->checkSecurity(
-                [],
+                ['partial'],
                 [],
                 []
             );
@@ -59,8 +59,14 @@ class __TwigTemplate_02a7e7467651147a24830b6815e2186f4ab340a93bf8120263dc07aaa80
     {
         $macros = $this->macros;
         // line 1
-        echo "<div>
-    Главная
+        echo "<div class=\"container-main\">
+    ";
+        // line 2
+        $context['__cms_partial_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("infonav"        , $context['__cms_partial_params']        , true        );
+        unset($context['__cms_partial_params']);
+        // line 3
+        echo "    Главная
 </div>";
     }
 
@@ -69,14 +75,20 @@ class __TwigTemplate_02a7e7467651147a24830b6815e2186f4ab340a93bf8120263dc07aaa80
         return "C:\\Users\\Pfumiko\\Desktop\\OpenServer\\domains\\caforward2/themes/medrum/pages/main.htm";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  62 => 1,);
+        return array (  69 => 3,  65 => 2,  62 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<div>
+        return new Source("<div class=\"container-main\">
+    {% partial 'infonav' %}
     Главная
 </div>", "C:\\Users\\Pfumiko\\Desktop\\OpenServer\\domains\\caforward2/themes/medrum/pages/main.htm", "");
     }

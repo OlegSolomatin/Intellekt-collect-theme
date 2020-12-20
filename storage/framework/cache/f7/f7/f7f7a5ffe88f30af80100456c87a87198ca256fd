@@ -1,10 +1,42 @@
-1608422481a:1:{s:12:"contacts.htm";a:9:{s:8:"fileName";s:12:"contacts.htm";s:7:"content";s:121:"title = "Контакты"
+1608495563a:1:{s:12:"contacts.htm";a:9:{s:8:"fileName";s:12:"contacts.htm";s:7:"content";s:837:"title = "Контакты"
 url = "/contacts"
 layout = "default"
 is_hidden = 0
 ==
-<div>
-    Контакты
-</div>";s:5:"mtime";i:1608231848;s:6:"markup";s:35:"<div>
-    Контакты
+<div class="container-main">
+    {% partial 'infonav' %}
+    <div class="container-main-contacts">
+        <h2>{{this.page.title}}</h2>
+        <div class="container-main-position">
+            <section class="container-contacts-item">
+                <h3>Адрес</h3>
+            </section>
+            <section class="container-contacts-item">
+                <h3>Телефон</h3>
+            </section>
+            <section class="container-contacts-item">
+                <h3>Карта</h3>
+                <div id="map" style="width: 100%; height:250px"></div>
+                <script src="https://api-maps.yandex.ru/2.0/?load=package.full&amp;lang=ru-RU"></script>
+            </section>
+        </div>
+    </div>
+</div>";s:5:"mtime";i:1608494962;s:6:"markup";s:751:"<div class="container-main">
+    {% partial 'infonav' %}
+    <div class="container-main-contacts">
+        <h2>{{this.page.title}}</h2>
+        <div class="container-main-position">
+            <section class="container-contacts-item">
+                <h3>Адрес</h3>
+            </section>
+            <section class="container-contacts-item">
+                <h3>Телефон</h3>
+            </section>
+            <section class="container-contacts-item">
+                <h3>Карта</h3>
+                <div id="map" style="width: 100%; height:250px"></div>
+                <script src="https://api-maps.yandex.ru/2.0/?load=package.full&amp;lang=ru-RU"></script>
+            </section>
+        </div>
+    </div>
 </div>";s:4:"code";N;s:5:"title";s:16:"Контакты";s:3:"url";s:9:"/contacts";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";}}

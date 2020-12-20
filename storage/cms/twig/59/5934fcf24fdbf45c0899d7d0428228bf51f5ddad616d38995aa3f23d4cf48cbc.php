@@ -84,22 +84,6 @@ class __TwigTemplate_139969fe56366c1f79fdf37aaed2dbdd25a986ec6ef63080c25325be5ae
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 12
-        echo "    ";
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(($context["itemsmenu"] ?? null));
-        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 13
-            echo "    <a class=\"nav-item\" href=\"";
-            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["item"], "url", [], "any", false, false, true, 13), 13, $this->source), "html", null, true);
-            echo "\"><span>";
-            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["item"], "title", [], "any", false, false, true, 13), 13, $this->source), "html", null, true);
-            echo "</span></a>
-    ";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 15
         echo "</div>";
     }
 
@@ -115,7 +99,7 @@ class __TwigTemplate_139969fe56366c1f79fdf37aaed2dbdd25a986ec6ef63080c25325be5ae
 
     public function getDebugInfo()
     {
-        return array (  103 => 15,  92 => 13,  87 => 12,  76 => 10,  72 => 9,  62 => 1,);
+        return array (  87 => 12,  76 => 10,  72 => 9,  62 => 1,);
     }
 
     public function getSourceContext()
@@ -128,9 +112,6 @@ class __TwigTemplate_139969fe56366c1f79fdf37aaed2dbdd25a986ec6ef63080c25325be5ae
     <span class=\"button button-toggle\"></span>
 </label>
 <div class=\"container-header-nav nav\">
-    {% for item in itemsmenu %}
-    <a class=\"nav-item\" href=\"{{ item.url }}\"><span>{{ item.title }}</span></a>
-    {% endfor %}
     {% for item in itemsmenu %}
     <a class=\"nav-item\" href=\"{{ item.url }}\"><span>{{ item.title }}</span></a>
     {% endfor %}

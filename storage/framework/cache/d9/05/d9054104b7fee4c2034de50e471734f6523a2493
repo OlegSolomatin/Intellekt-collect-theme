@@ -1,10 +1,12 @@
-1608422481a:1:{s:11:"debtors.htm";a:9:{s:8:"fileName";s:11:"debtors.htm";s:7:"content";s:124:"title = "Должникам"
+1608495563a:1:{s:11:"debtors.htm";a:9:{s:8:"fileName";s:11:"debtors.htm";s:7:"content";s:176:"title = "Должникам"
 url = "/debtors"
 layout = "default"
 is_hidden = 0
 ==
-<div>
+<div class="container-main">
+    {% partial 'infonav' %}
     Должникам
-</div>";s:5:"mtime";i:1608231848;s:6:"markup";s:37:"<div>
+</div>";s:5:"mtime";i:1608467453;s:6:"markup";s:89:"<div class="container-main">
+    {% partial 'infonav' %}
     Должникам
 </div>";s:4:"code";N;s:5:"title";s:18:"Должникам";s:3:"url";s:8:"/debtors";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";}}

@@ -28,6 +28,8 @@ $darktextplaceholder: #B0B3B6;
 $darkbutton: #E7E9ED;
 
 $darkredbase: #F23E5C;
+$darkredbasergba: rgba(242,62,92,1);
+$darkredhover: #832132;
 
 
 $whitetext: #fff;
@@ -311,7 +313,7 @@ $gradientWh: transparent linear-gradient(104deg, #3C016D 0%, #D060F2 100%) 0% 0%
 @mixin styletext(){
   text-align: left;
   width: 100%;
-  color: $blacktext;
+  color: $darkbasetext;
   font-size: $size16;
   line-height: 1.2;
   padding: .5vw 0;
@@ -326,8 +328,8 @@ $gradientWh: transparent linear-gradient(104deg, #3C016D 0%, #D060F2 100%) 0% 0%
   border: none;
   border-radius: 5px;
   &:focus {
-    outline: $darkfiol 1px;
-    border: 1px solid $darkfiol;
+    outline: $darkredhover 1px;
+    border: 1px solid $darkredhover;
   }
   &:invalid{
     -webkit-box-shadow: none;

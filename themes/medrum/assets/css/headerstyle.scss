@@ -1,13 +1,14 @@
 @import "galaxyvariablesstyle.scss";
 
 header {
-  width: 250px;
+  width: 200px;
   @include flex();
   @include align-items-center();
   @include flex-coldirection();
   @include stylescroll($darkredbase,$darktiny);
   flex-shrink: 0;
   background: $darklarge;
+  border-right: 2px solid $darkredhover;
   @include mediaMaxW(768px){
     width: 100%;
   }
@@ -30,7 +31,7 @@ header {
     }
   }
   .container-header-nav{
-    width: 250px;
+    width: 200px;
     @include flex();
     @include align-items-start();
     @include justify-content-center();
@@ -245,15 +246,15 @@ header {
   border-top-left-radius: 15px;
   margin: 5px;
   &:hover{
-    background: $darkredbase;
-    opacity: 0.6;
+    background: $darkredhover;
+    color: $linkcolor;
     transition: $transition-duration;
     color: inherit;
     text-decoration: none;
   }
   &.active{
     background: $darkredbase;
-    opacity: 0.6;
+    color: $linkcolor;
     &:hover{
       opacity: 0.5;
     }

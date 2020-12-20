@@ -1,0 +1,22 @@
+<form class="container-questions" data-request="{{ __SELF__ }}::onFormSubmit">
+    {{ form_token() }}
+
+    <div id="{{ __SELF__ }}_forms_flash"></div>
+
+    <div class="container-form-items">
+        <label>Ваше имя и фамилия</label>
+        <input name="name" type="text" class="header-modal-input first-child">
+        <label>Ваш e-mail</label>
+        <input required name="email" type="email" class="header-modal-input">
+        <label>Ваш контактный номер</label>
+        <input id="phone" required name="phone" type="tel" class="header-modal-input">
+        <label>Текст вопроса</label>
+        <textarea name="message" class="header-modal-textarea"></textarea>
+        <label class="custom-checkbox">
+            <input id="checkbox" name="accept" type="checkbox">
+            <span>Даю согласие на обработку персональных данных</span>
+        </label>
+        <button id="butdis" class="header-modal-submit button btn btn-outline-dark" type="submit" disabled>Отправить</button>
+    </div>
+</form>
+

@@ -222,15 +222,15 @@ $gradientWh: transparent linear-gradient(104deg, #3C016D 0%, #D060F2 100%) 0% 0%
   font-style: normal;
 }
 @mixin paddingposition(){
-  padding: 0px 5vw;
+  padding: 0 5vw;
   @include mediaMaxW(1368px){
-    padding: 0px 3vw;
+    padding: 0 3vw;
   }
 }
 
 @mixin linkstyle($size){
   color: $whitetext;
-  font-family: 'OpenSans-SemiBold';
+  font-family: 'OpenSans-SemiBold', sans-serif;
   font-size: $size;
   transition: .8s;
   text-decoration: none;
@@ -247,7 +247,7 @@ $gradientWh: transparent linear-gradient(104deg, #3C016D 0%, #D060F2 100%) 0% 0%
   font-size: $size20;
   border-radius: 30px;
   text-decoration: none;
-  font-family: 'OpenSans-SemiBold';
+  font-family: 'OpenSans-SemiBold', sans-serif;
   transition: .8s;
   width: fit-content;
   border: none;
@@ -321,7 +321,7 @@ $gradientWh: transparent linear-gradient(104deg, #3C016D 0%, #D060F2 100%) 0% 0%
 
 @mixin styleinput{
   width: 100%;
-  margin: 5px 0px;
+  margin: 5px 0;
   padding: 0 15px;
   height: 40px;
   background: gainsboro;
@@ -339,22 +339,23 @@ $gradientWh: transparent linear-gradient(104deg, #3C016D 0%, #D060F2 100%) 0% 0%
 
 @mixin styletextarea{
   resize: none;
-  height: 65px;
+  height: 100px;
   padding: 5px 15px 5px 15px;
-  margin: 5px 0px;
+  margin: 5px 0;
   outline: 0;
   width: 100%;
-  background: gainsboro;
+  background: $darktiny;
   border: none;
   border-radius: 5px;
+  color: $whitetext;
   &:focus{
-    border: 1px solid $darkfiol;
+    border: 1px solid $darkredhover;
   }
   @media (prefers-color-scheme: light) {
-    @include stylescroll($yellowtext2,$whitetext);
+    @include stylescroll($darkmiddle,$darkredhover);
   }
   @media (prefers-color-scheme: dark) {
-    @include stylescroll($yellowtext,$whitetext);
+    @include stylescroll($darkmiddle,$darkredhover);
   }
 }
 
@@ -365,7 +366,7 @@ $gradientWh: transparent linear-gradient(104deg, #3C016D 0%, #D060F2 100%) 0% 0%
     background-image:url('');
     background-repeat:no-repeat;
     width:6px;
-    height:0px;
+    height:0;
   }
 
   &::-webkit-scrollbar-track {
@@ -376,7 +377,7 @@ $gradientWh: transparent linear-gradient(104deg, #3C016D 0%, #D060F2 100%) 0% 0%
     -webkit-border-radius: 15px;
     border-radius: 15px;
     background-color: $color;
-    box-shadow:0px 1px 1px #fff inset;
+    box-shadow:0 1px 1px #fff inset;
     background-image:url('https://yraaa.ru/_pu/24/59610063.png');
     background-position:center;
     background-repeat:no-repeat;
@@ -386,7 +387,7 @@ $gradientWh: transparent linear-gradient(104deg, #3C016D 0%, #D060F2 100%) 0% 0%
     background-image:url('');
     background-repeat:no-repeat;
     width:7px;
-    height:0px;
+    height:0;
   }
 
   &::-webkit-scrollbar{
@@ -447,7 +448,7 @@ $gradientWh: transparent linear-gradient(104deg, #3C016D 0%, #D060F2 100%) 0% 0%
     font-size: $size20;
     border-radius: 30px;
     text-decoration: none;
-    font-family: 'OpenSans-SemiBold';
+    font-family: 'OpenSans-SemiBold', sans-serif;
     transition: .8s;
     cursor: pointer;
     @include flex();
@@ -487,8 +488,8 @@ $gradientWh: transparent linear-gradient(104deg, #3C016D 0%, #D060F2 100%) 0% 0%
     margin: 0 auto !important;
     padding: 0 !important;
     background: #1c1e21 !important;
-    font-family: 'OpenSans-Regular';
-    @include stylescroll($yellowtext2,$darkfiol);
+    font-family: 'OpenSans-Regular', sans-serif;
+    @include stylescroll($darkredbase,$darkmiddle);
     @include flex();
     height: 100vh;
     max-width: 1920px;
@@ -508,9 +509,9 @@ $gradientWh: transparent linear-gradient(104deg, #3C016D 0%, #D060F2 100%) 0% 0%
     margin: 0 auto !important;
     padding: 0 !important;
     background: #1c1e21 !important;
-    font-family: 'OpenSans-Regular';
+    font-family: 'OpenSans-Regular', sans-serif;
     @include flex();
-    @include stylescroll($yellowtext,$darkfiol);
+    @include stylescroll($darkredhover,$darktiny);
     height: 100vh;
     max-width: 1920px;
     @include mediaMaxW(768px){

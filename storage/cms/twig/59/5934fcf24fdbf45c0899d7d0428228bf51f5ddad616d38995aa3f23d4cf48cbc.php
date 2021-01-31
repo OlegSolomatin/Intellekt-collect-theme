@@ -60,7 +60,7 @@ class __TwigTemplate_139969fe56366c1f79fdf37aaed2dbdd25a986ec6ef63080c25325be5ae
         $macros = $this->macros;
         // line 1
         echo "<div class=\"container-header-logo\">
-1123123123123123
+    Интеллект-коллект
 </div>
 <input id=\"toggle\" type=\"checkbox\">
 <label class=\"toggle-container\" for=\"toggle\">
@@ -73,7 +73,9 @@ class __TwigTemplate_139969fe56366c1f79fdf37aaed2dbdd25a986ec6ef63080c25325be5ae
         $context['_seq'] = twig_ensure_traversable(($context["itemsmenu"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
             // line 10
-            echo "    <a class=\"nav-item\" href=\"";
+            echo "    <a class=\"nav-item ";
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["item"], "viewBag", [], "any", false, false, true, 10), "cssClass", [], "any", false, false, true, 10), 10, $this->source), "html", null, true);
+            echo "\" href=\"";
             echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["item"], "url", [], "any", false, false, true, 10), 10, $this->source), "html", null, true);
             echo "\"><span>";
             echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["item"], "title", [], "any", false, false, true, 10), 10, $this->source), "html", null, true);
@@ -99,13 +101,13 @@ class __TwigTemplate_139969fe56366c1f79fdf37aaed2dbdd25a986ec6ef63080c25325be5ae
 
     public function getDebugInfo()
     {
-        return array (  87 => 12,  76 => 10,  72 => 9,  62 => 1,);
+        return array (  89 => 12,  76 => 10,  72 => 9,  62 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("<div class=\"container-header-logo\">
-1123123123123123
+    Интеллект-коллект
 </div>
 <input id=\"toggle\" type=\"checkbox\">
 <label class=\"toggle-container\" for=\"toggle\">
@@ -113,7 +115,7 @@ class __TwigTemplate_139969fe56366c1f79fdf37aaed2dbdd25a986ec6ef63080c25325be5ae
 </label>
 <div class=\"container-header-nav nav\">
     {% for item in itemsmenu %}
-    <a class=\"nav-item\" href=\"{{ item.url }}\"><span>{{ item.title }}</span></a>
+    <a class=\"nav-item {{item.viewBag.cssClass}}\" href=\"{{ item.url }}\"><span>{{ item.title }}</span></a>
     {% endfor %}
 </div>", "C:\\Users\\Pfumiko\\Desktop\\OpenServer\\domains\\caforward2/themes/medrum/partials/header.htm", "");
     }

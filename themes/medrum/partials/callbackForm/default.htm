@@ -1,17 +1,30 @@
+[viewBag]
+
+[emptyForm]
+messages_success = "Ваша форма была успешно отправлена!"
+messages_errors = "В вашей заявке содержатся ошибки."
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
+==
 <form class="container-questions" data-request="{{ __SELF__ }}::onFormSubmit">
     {{ form_token() }}
 
     <div id="{{ __SELF__ }}_forms_flash"></div>
 
     <div class="container-form-items">
-        <label>Ваше имя и фамилия</label>
-        <input name="name" type="text" class="header-modal-input first-child">
-        <label>Ваш e-mail</label>
-        <input required name="email" type="email" class="header-modal-input">
-        <label>Ваш контактный номер</label>
+        <label for="name">Ваше имя и фамилия</label>
+        <input id="name" name="name" type="text" class="header-modal-input first-child">
+        <label for="email">Ваш e-mail</label>
+        <input id="email" required name="email" type="email" class="header-modal-input">
+        <label for="phone">Ваш контактный номер</label>
         <input id="phone" required name="phone" type="tel" class="header-modal-input">
-        <label>Текст вопроса</label>
-        <textarea name="message" class="header-modal-textarea"></textarea>
+        <label for="message">Текст вопроса</label>
+        <textarea id="message" name="message" class="header-modal-textarea"></textarea>
         <label class="custom-checkbox">
             <input id="checkbox" name="accept" type="checkbox">
             <span>Даю согласие на обработку персональных данных</span>
@@ -19,4 +32,3 @@
         <button id="butdis" class="header-modal-submit button btn btn-outline-dark" type="submit" disabled>Отправить</button>
     </div>
 </form>
-

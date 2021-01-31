@@ -66,7 +66,17 @@ class __TwigTemplate_308ade56d27d2d80ad33f9b4b519b48f821a613d06fba929e42bbc3a3df
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("infonav"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
         // line 3
-        echo "    О нас
+        echo "    <div class=\"container-main-aboutus\">
+        <h2>О компании</h2>
+        <div class=\"container-main-position\">
+            <section>
+                <p>Профессиональное коллекторское агентство, предоставляющее услуги полного цикла взыскания просроченной задолженности, а также организацию и сопровождение взыскания в рамках судебного и исполнительного производств.</p>
+            </section>
+            <seection>
+                <p>Компания осуществляет свою деятельность в рамках действующего законодательства РФ, соблюдая этические нормы и уважая интересы всех лиц, задействованных в процессе взыскания.</p>
+            </seection>
+        </div>
+    </div>
 </div>";
     }
 
@@ -89,7 +99,17 @@ class __TwigTemplate_308ade56d27d2d80ad33f9b4b519b48f821a613d06fba929e42bbc3a3df
     {
         return new Source("<div class=\"container-main\">
     {% partial 'infonav' %}
-    О нас
+    <div class=\"container-main-aboutus\">
+        <h2>О компании</h2>
+        <div class=\"container-main-position\">
+            <section>
+                <p>Профессиональное коллекторское агентство, предоставляющее услуги полного цикла взыскания просроченной задолженности, а также организацию и сопровождение взыскания в рамках судебного и исполнительного производств.</p>
+            </section>
+            <seection>
+                <p>Компания осуществляет свою деятельность в рамках действующего законодательства РФ, соблюдая этические нормы и уважая интересы всех лиц, задействованных в процессе взыскания.</p>
+            </seection>
+        </div>
+    </div>
 </div>", "C:\\Users\\Pfumiko\\Desktop\\OpenServer\\domains\\caforward2/themes/medrum/pages/aboutus.htm", "");
     }
 }

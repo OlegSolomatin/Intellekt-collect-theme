@@ -66,7 +66,12 @@ class __TwigTemplate_02a7e7467651147a24830b6815e2186f4ab340a93bf8120263dc07aaa80
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("infonav"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
         // line 3
-        echo "    Главная
+        echo "    <div class=\"container-main-main\">
+        <h2>Главная</h2>
+        <div class=\"container-main-position\">
+
+        </div>
+    </div>
 </div>";
     }
 
@@ -89,7 +94,12 @@ class __TwigTemplate_02a7e7467651147a24830b6815e2186f4ab340a93bf8120263dc07aaa80
     {
         return new Source("<div class=\"container-main\">
     {% partial 'infonav' %}
-    Главная
+    <div class=\"container-main-main\">
+        <h2>Главная</h2>
+        <div class=\"container-main-position\">
+
+        </div>
+    </div>
 </div>", "C:\\Users\\Pfumiko\\Desktop\\OpenServer\\domains\\caforward2/themes/medrum/pages/main.htm", "");
     }
 }

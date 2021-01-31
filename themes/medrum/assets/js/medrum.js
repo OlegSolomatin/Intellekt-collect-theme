@@ -7,12 +7,28 @@ $(document).ready(function(){
         }
     });
 
-    ymaps.ready(init);
-    function init(){
-        var myMap = new ymaps.Map("map",{center: [55.75985606898725,37.61054750000002],zoom: 12});
-        myMap.controls.add("zoomControl").add("typeSelector").add("mapTools");
-        var myPlacemark = new ymaps.Placemark([55.75985606898725,37.61054750000002]);
-        myMap.geoObjects.add(myPlacemark);
+    /* При добавлении новой страницы в CMS необходимо назначить класс, и добавить подсвет через IF ниже*/
+
+    let hreflocal = window.location.pathname;
+
+    function LocationHref() {
+        if (hreflocal.lastIndexOf("services") >= 1)  {
+            $('.services').addClass('nav-item-active');
+        } else if (hreflocal.lastIndexOf("debtors") >= 1) {
+            $('.debtors').addClass('nav-item-active');
+        } else if (hreflocal.lastIndexOf("aboutus") >= 1) {
+            $('.aboutus').addClass('nav-item-active');
+        } else if (hreflocal.lastIndexOf("contacts") >= 1) {
+            $('.contacts').addClass('nav-item-active');
+        }else {
+            $('.index').addClass('nav-item-active');
+        }
     }
+
+    LocationHref();
+
+    //console.log(hreflocal);
+
+    /* End if */
 
 });

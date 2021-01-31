@@ -1,7 +1,7 @@
 [viewBag]
 ==
 <div class="container-header-logo">
-1123123123123123
+    Интеллект-коллект
 </div>
 <input id="toggle" type="checkbox">
 <label class="toggle-container" for="toggle">
@@ -9,6 +9,6 @@
 </label>
 <div class="container-header-nav nav">
     {% for item in itemsmenu %}
-    <a class="nav-item" href="{{ item.url }}"><span>{{ item.title }}</span></a>
+    <a class="nav-item {{item.viewBag.cssClass}}" href="{{ item.url }}"><span>{{ item.title }}</span></a>
     {% endfor %}
 </div>

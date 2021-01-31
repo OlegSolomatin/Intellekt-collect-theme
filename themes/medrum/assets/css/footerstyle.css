@@ -73,7 +73,7 @@
     margin: 0 auto !important;
     padding: 0 !important;
     background: #1c1e21 !important;
-    font-family: "OpenSans-Regular";
+    font-family: "OpenSans-Regular", sans-serif;
     overflow-x: hidden !important;
     overflow: auto;
     display: -webkit-box !important;
@@ -86,16 +86,16 @@
     background-image: url("");
     background-repeat: no-repeat;
     width: 6px;
-    height: 0px;
+    height: 0;
   }
   .main-container::-webkit-scrollbar-track {
-    background-color: #2A0252;
+    background-color: #3A3B3C;
   }
   .main-container::-webkit-scrollbar-thumb {
     -webkit-border-radius: 15px;
     border-radius: 15px;
-    background-color: #ffcb17;
-    box-shadow: 0px 1px 1px #fff inset;
+    background-color: #F23E5C;
+    box-shadow: 0 1px 1px #fff inset;
     background-image: url("https://yraaa.ru/_pu/24/59610063.png");
     background-position: center;
     background-repeat: no-repeat;
@@ -104,7 +104,7 @@
     background-image: url("");
     background-repeat: no-repeat;
     width: 7px;
-    height: 0px;
+    height: 0;
   }
   .main-container::-webkit-scrollbar {
     width: 11px;
@@ -129,7 +129,7 @@
     margin: 0 auto !important;
     padding: 0 !important;
     background: #1c1e21 !important;
-    font-family: "OpenSans-Regular";
+    font-family: "OpenSans-Regular", sans-serif;
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
@@ -142,16 +142,16 @@
     background-image: url("");
     background-repeat: no-repeat;
     width: 6px;
-    height: 0px;
+    height: 0;
   }
   .main-container::-webkit-scrollbar-track {
-    background-color: #2A0252;
+    background-color: #444546;
   }
   .main-container::-webkit-scrollbar-thumb {
     -webkit-border-radius: 15px;
     border-radius: 15px;
-    background-color: #EFF121;
-    box-shadow: 0px 1px 1px #fff inset;
+    background-color: #832132;
+    box-shadow: 0 1px 1px #fff inset;
     background-image: url("https://yraaa.ru/_pu/24/59610063.png");
     background-position: center;
     background-repeat: no-repeat;
@@ -160,7 +160,7 @@
     background-image: url("");
     background-repeat: no-repeat;
     width: 7px;
-    height: 0px;
+    height: 0;
   }
   .main-container::-webkit-scrollbar {
     width: 11px;
@@ -283,7 +283,7 @@ footer {
   align-items: center;
 }
 footer .container-footer-nav {
-  padding: 0px 5vw;
+  padding: 0 5vw;
   max-width: 1920px;
   width: 100%;
   display: -webkit-box !important;
@@ -303,7 +303,7 @@ footer .container-footer-nav {
 }
 @media screen and (max-width: 1368px) {
   footer .container-footer-nav {
-    padding: 0px 3vw;
+    padding: 0 3vw;
   }
 }
 

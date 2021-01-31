@@ -2,13 +2,48 @@
 @charset "UTF-8";
 
 main{
- width: 100%;
+ width: calc(100% - 200px);
+ @include mediaMaxW(768px){
+  width: 100%;
+ }
  .container-main{
   @include flex();
   @include flex-coldirection();
   @include justify-content-start();
   width: 100%;
   height: 100vh;
+
+  &-main{
+   width: 100%;
+   height: 100%;
+   @include flex();
+   @include flex-coldirection();
+   @include align-items-start();
+   padding: 25px;
+   @include stylescroll($darkredbase,$darktiny);
+   h2{
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: $size35;
+    font-family: "OpenSans-SemiBold", sans-serif;
+   }
+  }
+
+  &-services{
+   width: 100%;
+   height: 100%;
+   @include flex();
+   @include flex-coldirection();
+   @include align-items-start();
+   padding: 25px;
+   @include stylescroll($darkredbase,$darktiny);
+   h2{
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: $size35;
+    font-family: "OpenSans-SemiBold", sans-serif;
+   }
+  }
 
   &-info{
    width: 100%;
@@ -42,19 +77,35 @@ main{
    }
   }
 
+  &-aboutus{
+   width: 100%;
+   height: 100%;
+   @include flex();
+   @include flex-coldirection();
+   @include align-items-start();
+   padding: 25px;
+   @include stylescroll($darkredbase,$darktiny);
+   h2{
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: $size35;
+    font-family: "OpenSans-SemiBold", sans-serif;
+   }
+  }
+
   &-contacts{
    width: 100%;
    height: 100%;
    @include flex();
    @include flex-coldirection();
    @include align-items-start();
-   padding: 2.5vw;
+   padding: 25px;
    @include stylescroll($darkredbase,$darktiny);
    h2{
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     font-weight: 600;
     font-size: $size35;
-    font-family: "OpenSans-Regular";
+    font-family: "OpenSans-SemiBold", sans-serif;
    }
   }
 
@@ -64,9 +115,10 @@ main{
    @include flex();
    @include flex-rowdirection();
    @include justify-content-center();
-   @include align-items-start();
+   @include align-items-center();
    @include flex-wrap();
   }
+
  }
 }
 
@@ -94,34 +146,94 @@ main{
  @include flex();
  @include align-items-center();
  @include flex-coldirection();
+ &:hover{
+  transform: translateY(5px);
+  transition: $transition-duration;
+ }
+ text-align: center;
  &:nth-child(1){
-  width: 46%;
+  width: 29%;
  }
  &:nth-child(2){
-  width: 46%;
+  width: 29%;
+ }
+ &:nth-child(3){
+  width: 29%;
  }
  &:last-child{
-  padding: 1.5vw 0 0 0;
+  padding:1.5vw 0 0;
  }
  #map{
-   border-bottom-left-radius: 15px;
-   border-bottom-right-radius: 15px;
+   border-radius: 15px;
  }
  h3{
-  font-size: $size30;
-  font-weight: 600;
+  font-size: $size20;
   margin-bottom: 1rem;
   color: $linkcolor;
+ }
+ a{
+  color: $whitetext;
+  font-size: $size16;
+  font-family: "OpenSans-Regular", sans-serif;
+  text-decoration: none;
+  &:hover{
+   color: $darkredbase;
+  }
+ }
+}
+
+.container-services-item{
+ min-width: 300px;
+ width: calc(50% - ((10px + 2px)*2));
+ max-width: 600px;
+ height: auto;
+ margin: 10px;
+ position: relative;
+ padding: 1.5vw;
+ border: 1px solid transparent;
+ border-radius: 15px;
+ transition: $transition-duration;
+ &:hover{
+  border: 1px solid white;
+  border-radius: 15px;
+ }
+ .header-section{
+  @include flex();
+  @include align-items-center();
+  margin-bottom: 1rem;
+  svg{
+   width: 5vw !important;
+   height: 4vw;
+   color: $whitetext;
+  }
+  h3{
+   font-weight: 600;
+   font-size: $size20;
+   margin-left: 2rem;
+   font-family: "OpenSans-SemiBold", sans-serif;
+  }
+ }
+ p{
+  font-size: $size16;
+  margin-bottom: .5rem;
+  font-family: "OpenSans-Regular", sans-serif;
  }
 }
 
 .modal-content{
  background: $darkbase;
- .modal-title{
-  opacity: 0;
+ .modal-header{
+  border: none;
+  color: $whitetext;
+  text-align: center;
+  position: relative;
  }
  .close{
+  position: absolute;
   color: $linkcolor;
+  top: 0;
+  right: 0;
+  margin: 0 ;
  }
 }
 

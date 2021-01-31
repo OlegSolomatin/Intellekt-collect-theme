@@ -1,55 +1,39 @@
-1608495563a:1:{s:16:"header-menu.yaml";a:7:{s:8:"fileName";s:16:"header-menu.yaml";s:7:"content";s:1356:"items:
+1612125223a:1:{s:16:"header-menu.yaml";a:7:{s:8:"fileName";s:16:"header-menu.yaml";s:7:"content";s:1045:"items:
     -
         title: Главная
-        nesting: null
         type: cms-page
-        url: null
         code: ''
         reference: main
-        cmsPage: null
-        replace: null
         viewBag:
             isHidden: '0'
-            cssClass: ''
+            cssClass: index
             isExternal: '0'
     -
         title: Услуги
-        nesting: null
         type: cms-page
-        url: null
         code: ''
         reference: services
-        cmsPage: null
-        replace: null
         viewBag:
             isHidden: '0'
-            cssClass: ''
+            cssClass: services
             isExternal: '0'
     -
         title: Должникам
-        nesting: null
         type: cms-page
-        url: null
         code: ''
         reference: debtors
-        cmsPage: null
-        replace: null
         viewBag:
             isHidden: '0'
-            cssClass: ''
+            cssClass: debtors
             isExternal: '0'
     -
         title: 'О нас'
-        nesting: null
         type: cms-page
-        url: null
         code: ''
         reference: aboutus
-        cmsPage: null
-        replace: null
         viewBag:
             isHidden: '0'
-            cssClass: ''
+            cssClass: aboutus
             isExternal: '0'
     -
         title: Контакты
@@ -58,7 +42,7 @@
         reference: contacts
         viewBag:
             isHidden: '0'
-            cssClass: ''
+            cssClass: contacts
             isExternal: '0'
 name: header-menu
-";s:5:"mtime";i:1608228571;s:6:"markup";N;s:4:"code";N;s:4:"name";N;s:5:"items";a:0:{}}}
+";s:5:"mtime";i:1611944271;s:6:"markup";N;s:4:"code";N;s:4:"name";N;s:5:"items";a:0:{}}}

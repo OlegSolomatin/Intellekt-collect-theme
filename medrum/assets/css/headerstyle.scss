@@ -13,6 +13,10 @@ header {
   @include mediaMaxW(768px){
     width: 100%;
     border: none;
+    position: sticky;
+    overflow: hidden;
+    top: 0;
+    z-index: 1000;
   }
 
 

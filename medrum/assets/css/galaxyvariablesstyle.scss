@@ -344,10 +344,11 @@ $gradientWh: transparent linear-gradient(104deg, #3C016D 0%, #D060F2 100%) 0% 0%
   margin: 5px 0;
   outline: 0;
   width: 100%;
-  background: $darktiny;
+  background: gainsboro;
   border: none;
   border-radius: 5px;
-  color: $whitetext;
+  color: $darklarge;
+  line-height: 1.2;
   &:focus{
     border: 1px solid $darkredhover;
   }
@@ -498,6 +499,7 @@ $gradientWh: transparent linear-gradient(104deg, #3C016D 0%, #D060F2 100%) 0% 0%
     max-width: 1920px;
     @include mediaMaxW(768px){
       @include flex-coldirection();
+      overflow: hidden;
     }
   }
 }
@@ -522,6 +524,7 @@ $gradientWh: transparent linear-gradient(104deg, #3C016D 0%, #D060F2 100%) 0% 0%
     max-width: 1920px;
     @include mediaMaxW(768px){
       @include flex-coldirection();
+      overflow: hidden;
     }
   }
 }

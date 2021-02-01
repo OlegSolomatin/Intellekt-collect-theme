@@ -16,7 +16,7 @@ main{
 
   &-main{
    width: 100%;
-   height: 100%;
+   height: auto;
    @include flex();
    @include flex-coldirection();
    @include align-items-start();
@@ -32,7 +32,7 @@ main{
 
   &-services{
    width: 100%;
-   height: 100%;
+   height: auto;
    @include flex();
    @include flex-coldirection();
    @include align-items-start();
@@ -48,7 +48,7 @@ main{
 
   &-debtors{
    width: 100%;
-   height: 100%;
+   height: auto;
    @include flex();
    @include flex-coldirection();
    @include align-items-start();
@@ -74,6 +74,9 @@ main{
    @include align-items-center();
    @include justify-content-end();
    padding-right: 4vw;
+   @include mediaMaxW(768px){
+    padding-right: 3vw;
+   }
    .info-item{
     margin-left: 2rem;
     @include flex();
@@ -96,7 +99,7 @@ main{
 
   &-aboutus{
    width: 100%;
-   height: 100%;
+   height: auto;
    @include flex();
    @include flex-coldirection();
    @include align-items-start();
@@ -112,7 +115,7 @@ main{
 
   &-contacts{
    width: 100%;
-   height: 100%;
+   height: auto;
    @include flex();
    @include flex-coldirection();
    @include align-items-start();
@@ -128,7 +131,7 @@ main{
 
   &-position{
    width: 100%;
-   height: 100%;
+   height: auto;
    @include flex();
    @include flex-rowdirection();
    @include justify-content-center();
@@ -212,6 +215,10 @@ main{
    }
   }
  }
+}
+
+.main-item{
+ @include justify-content-between();
 }
 
 .container-contacts-item{
@@ -342,7 +349,9 @@ main{
  }
  .debtor-qr{
   img{
-   width: 250px;
+   min-width: 100px;
+   width: 20vw;
+   max-width: 250px;
    height: auto;
   }
  }
@@ -370,7 +379,6 @@ main{
  @include flex-coldirection();
  @include align-items-center();
  @include justify-content-start();
- padding-top: 25px;
  height: fit-content;
  @include mediaMaxW(768px){
   background: none;
@@ -515,7 +523,7 @@ main{
 
 .message{
  color: rgb(255, 255, 255);
- background-color: rgba(0, 0, 0, 0.7);
+ background-color: rgba(0, 0, 0, 0.9);
  position: absolute;
  overflow: hidden;
  height: 116px;
@@ -532,7 +540,7 @@ main{
    margin: 0;
    font-family: "OpenSans-Regular",sans-serif;
    font-weight: 400;
-   text-transform: uppercase;
+   text-transform: lowercase;
    font-size: 10px;
   }
   span{

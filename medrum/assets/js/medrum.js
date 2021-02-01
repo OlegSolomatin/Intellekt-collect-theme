@@ -41,8 +41,7 @@ $(document).ready(function(){
     /* End if */
 
     $('.text-copy').click(function(){
-        $('.message').css('animation' , 'rigth 2s both');
-        $('.container-main-debtors').remove(".message").delay(2000);
+        $('.message').remove();
         const text = $(this).text();
         const $temp = $("<input>");
         $("body").append($temp);
@@ -50,10 +49,12 @@ $(document).ready(function(){
         document.execCommand("copy");
         $temp.remove();
         $('.container-main-debtors').append('<div class="message"><div class="message-header"><p>Сообщение</p><p>1с. назад</p><span class="message-close">x</span></div><div class="message-content">'+ text +'</div><div class="message-info">Вы успешно скопировали</div></div>');
+
+        $('.message-close').click(function(){
+            $('.message').remove();
+        })
     });
 
-    $('.message-close').click(function(){
-        $('.container-main-debtors').remove(".message").delay(2000);
-    })
+
 
 });

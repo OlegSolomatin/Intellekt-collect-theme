@@ -9,6 +9,7 @@ header {
   flex-shrink: 0;
   background: $darklarge;
   border-right: 2px solid $darkredhover;
+  animation: left 1s both;
   @include mediaMaxW(768px){
     width: 100%;
     border: none;

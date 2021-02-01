@@ -5,5 +5,31 @@ is_hidden = 0
 ==
 <div class="container-main">
     {% partial 'infonav' %}
-    Должникам
+    <div class="container-main-debtors">
+        <h2>Должникам</h2>
+        <div class="container-main-position">
+            <section class="container-debtors-item">
+                <div class="debtor">
+                    <div class="title"><h2>Реквизиты для оплаты</h2></div>
+                    <div class="subtitle"><h3>Информация о получателе</h3></div>
+                    <div class="text-content"> <p>Получатель</p> <p class="text-copy">Общество с ограниченной ответственностью «Интеллект-коллект»</p> </div>
+                    <div class="text-content"> <p>ИНН</p> <p class="text-copy">5407980426</p> </div>
+                    <div class="text-content"> <p>КПП</p> <p class="text-copy">540701001</p> </div>
+                    <div class="text-content"> <p>ОКПО</p> <p class="text-copy"></p> </div>
+                    <div class="text-content"> <p>ОГРН</p> <p class="text-copy"></p> </div>
+                    <div class="subtitle"><h3>Реквизиты</h3></div>
+                    <div class="text-content"> <p>БИК</p> <p class="text-copy">045004774</p> </div>
+                    <div class="text-content"> <p>Рассчетный счет</p> <p class="text-copy">40702810323000009050</p> </div>
+                    <div class="text-content"> <p>Банк получателя</p> <p class="text-copy">ФИЛИАЛ «НОВОСИБИРСКИЙ» АО «АЛЬФА-БАНК»</p> </div>
+                    <div class="text-content"> <p>Корреспондентский счет</p> <p class="text-copy">30101810600000000774</p> </div>
+                    <div class="text-content"> <p>Банк получателя</p> <p class="text-copy"></p> </div>
+                    <div class="subtitle"><h3>Юридический и почтовый</h3></div>
+                    <div class="text-content" style="border: none"><p>Адрес</p> <p class="text-copy">630007, г. Новосибирск, Коммунистическая ул., д. 6, офис 307</p> </div>
+                </div>
+                <div class="debtor-qr">
+                    <img src="{{ 'assets/img/QR-code.svg' | theme }}">
+                </div>
+            </section>
+        </div>
+    </div>
 </div>

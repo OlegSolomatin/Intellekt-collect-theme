@@ -7,6 +7,17 @@ $(document).ready(function(){
         }
     });
 
+    // const counter = document.querySelector(".counter");
+    // let count = 0;
+    // setInterval(() => {
+    //     if(count == 92) {
+    //         clearInterval(count);
+    //     }else {
+    //         count+=1;
+    //         counter.textContent = count + "%";
+    //     }
+    // }, 42);
+
     /* При добавлении новой страницы в CMS необходимо назначить класс, и добавить подсвет через IF ниже*/
 
     let hreflocal = window.location.pathname;
@@ -27,8 +38,22 @@ $(document).ready(function(){
 
     LocationHref();
 
-    //console.log(hreflocal);
-
     /* End if */
+
+    $('.text-copy').click(function(){
+        $('.message').css('animation' , 'rigth 2s both');
+        $('.container-main-debtors').remove(".message").delay(2000);
+        const text = $(this).text();
+        const $temp = $("<input>");
+        $("body").append($temp);
+        $temp.val($(this).text()).select();
+        document.execCommand("copy");
+        $temp.remove();
+        $('.container-main-debtors').append('<div class="message"><div class="message-header"><p>Сообщение</p><p>1с. назад</p><span class="message-close">x</span></div><div class="message-content">'+ text +'</div><div class="message-info">Вы успешно скопировали</div></div>');
+    });
+
+    $('.message-close').click(function(){
+        $('.container-main-debtors').remove(".message").delay(2000);
+    })
 
 });

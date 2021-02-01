@@ -58,6 +58,8 @@
   body {
     background-color: #373e57;
     color: #ccc8db; }
+    body :root {
+      --delay: 0s; }
 
   .main-container {
     margin: 0 auto !important;
@@ -105,6 +107,8 @@
   body {
     background-color: #373e57;
     color: #ccc8db; }
+    body :root {
+      --delay: 0s; }
 
   .main-container {
     margin: 0 auto !important;
@@ -207,8 +211,7 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   position: relative;
   min-height: 50px;
-  content: " ";
-  display: block; }
+  content: " "; }
   .lost-image:before {
     content: " ";
     display: block;
@@ -232,6 +235,20 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     text-align: center; }
 
+@keyframes left {
+  0% {
+    transform: translateX(-30px);
+    opacity: 0; }
+  100% {
+    opacity: 1;
+    transform: none; } }
+@keyframes top {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0; }
+  100% {
+    opacity: 1;
+    transform: none; } }
 footer {
   width: 100%;
   padding: 0px 0px 70px;

@@ -58,6 +58,8 @@
   body {
     background-color: #373e57;
     color: #ccc8db; }
+    body :root {
+      --delay: 0s; }
 
   .main-container {
     margin: 0 auto !important;
@@ -105,6 +107,8 @@
   body {
     background-color: #373e57;
     color: #ccc8db; }
+    body :root {
+      --delay: 0s; }
 
   .main-container {
     margin: 0 auto !important;
@@ -207,8 +211,7 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   position: relative;
   min-height: 50px;
-  content: " ";
-  display: block; }
+  content: " "; }
   .lost-image:before {
     content: " ";
     display: block;
@@ -232,6 +235,20 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     text-align: center; }
 
+@keyframes left {
+  0% {
+    transform: translateX(-30px);
+    opacity: 0; }
+  100% {
+    opacity: 1;
+    transform: none; } }
+@keyframes top {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0; }
+  100% {
+    opacity: 1;
+    transform: none; } }
 header {
   width: 200px;
   display: -webkit-box !important;
@@ -248,7 +265,8 @@ header {
   overflow: auto;
   flex-shrink: 0;
   background: #242526;
-  border-right: 2px solid #832132; }
+  border-right: 2px solid #832132;
+  animation: left 1s both; }
   header::-webkit-scrollbar-button {
     background-image: url("");
     background-repeat: no-repeat;

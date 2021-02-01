@@ -12,6 +12,7 @@ main{
   @include justify-content-start();
   width: 100%;
   height: 100vh;
+  animation: top 1s both;
 
   &-main{
    width: 100%;
@@ -30,6 +31,22 @@ main{
   }
 
   &-services{
+   width: 100%;
+   height: 100%;
+   @include flex();
+   @include flex-coldirection();
+   @include align-items-start();
+   padding: 25px;
+   @include stylescroll($darkredbase,$darktiny);
+   h2{
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: $size35;
+    font-family: "OpenSans-SemiBold", sans-serif;
+   }
+  }
+
+  &-debtors{
    width: 100%;
    height: 100%;
    @include flex();
@@ -111,7 +128,7 @@ main{
 
   &-position{
    width: 100%;
-
+   height: 100%;
    @include flex();
    @include flex-rowdirection();
    @include justify-content-center();
@@ -133,6 +150,68 @@ main{
 .ymaps-map{
  border-bottom-left-radius: 15px;
  border-bottom-right-radius: 15px;
+}
+
+.container-main-item{
+ min-width: 300px;
+ width: calc(50% - ((10px + 2px)*2));
+ max-width: 600px;
+ height: auto;
+ margin: 10px;
+ position: relative;
+ padding: 1.5vw;
+ border: 1px solid transparent;
+ border-radius: 15px;
+ transition: $transition-duration;
+ &:hover{
+  border: 1px solid white;
+  border-radius: 15px;
+ }
+
+ .discount{
+  @include flex();
+  @include align-items-center();
+  &-wrapper{
+   svg{
+    width: 5vw !important;
+    height: 4vw;
+    color: $whitetext;
+   }
+  }
+ }
+
+ .title{
+  margin-right: 2.5vw;
+ }
+
+ .landmark{
+  @include flex();
+  @include align-items-center();
+  &-wrapper{
+   svg{
+    width: 5vw !important;
+    height: 4vw;
+    color: $whitetext;
+   }
+  }
+ }
+
+ .dock{
+  @include flex();
+  @include align-items-center();
+  &-wrapper{
+   a{
+    text-decoration: none;
+    outline: none;
+    border: none;
+    svg{
+     width: 5vw !important;
+     height: 4vw;
+     color: $whitetext;
+    }
+   }
+  }
+ }
 }
 
 .container-contacts-item{
@@ -217,6 +296,55 @@ main{
   font-size: $size16;
   margin-bottom: .5rem;
   font-family: "OpenSans-Regular", sans-serif;
+ }
+}
+
+.container-debtors-item{
+ box-shadow: 0 0 5px;
+ border-radius: 15px;
+ padding: 25px;
+ @include flex();
+ @include justify-content-between();
+ @include align-items-center();
+ .debtor{
+ margin-right: 75px;
+  .title{
+   font-size: $size28;
+   line-height: 1.5;
+   font-family: "OpenSans-SemiBold", sans-serif;
+   text-align: center;
+  }
+  .subtitle{
+   border-bottom: 1px solid $darkredhover;
+   h3{
+    font-size: $size20;
+    line-height: 1.2;
+    margin: 1rem 0;
+    font-family: "OpenSans-Regular",sans-serif;
+   }
+  }
+  .text-content{
+   font-size: $size14;
+   line-height: 1.2;
+   @include flex();
+   @include justify-content-between();
+   border-bottom: 1px solid $whitetext;
+   p:first-child{
+    margin: 1rem 0;
+    font-family: "OpenSans-SemiBold",sans-serif;
+    font-weight: 600;
+   }
+   p:last-child{
+    margin: 1rem 0 1rem 1rem;
+    cursor: pointer;
+   }
+  }
+ }
+ .debtor-qr{
+  img{
+   width: 250px;
+   height: auto;
+  }
  }
 }
 
@@ -328,5 +456,99 @@ main{
   .custom-checkbox > input:disabled + span::before {
    background-color: #e9ecef;
   }
+ }
+}
+
+.discount{
+ @include flex();
+ @include align-items-center();
+ .title{
+  margin-right: 2.5vw;
+  h2{
+   margin-bottom: 1rem;
+   font-weight: 600;
+   font-size: $size35;
+   font-family: "OpenSans-SemiBold", sans-serif;
+  }
+ }
+}
+
+.circle {
+ width: 100px;
+ height: 100px;
+ border: 3px solid #5b5f78;
+ border-radius: 50%;
+ position: relative;
+}
+
+.pie {
+ position: relative;
+ width: 120px;
+ height: 120px;
+ left: 50%;
+ top: 50%;
+ transform: translate(-50%, -50%) rotate(-90deg);
+ svg circle {
+  fill: transparent;
+  stroke: $darkredbase;
+  stroke-width: 7;
+  stroke-dasharray: 275;
+  stroke-dashoffset: 235;
+  animation: pieChart 3.8s linear forwards;
+ }
+}
+
+@keyframes pieChart {
+ 100% {
+  stroke-dashoffset: 0;
+ }
+}
+
+.counter {
+ position: absolute;
+ left: 50%;
+ top: 50%;
+ transform: translate(-50%, -50%);
+ color: $whitetext;
+ font-weight: 500;
+}
+
+.message{
+ color: rgb(255, 255, 255);
+ background-color: rgba(0, 0, 0, 0.7);
+ position: absolute;
+ overflow: hidden;
+ height: 116px;
+ padding: 16px 25px 16px 16px;;
+ border-radius: 16px;
+ right: 25px;
+ animation: left 2s both;
+ &-header{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 8px;
+  position: relative;
+  p{
+   margin: 0;
+   font-family: "OpenSans-Regular",sans-serif;
+   font-weight: 400;
+   text-transform: uppercase;
+   font-size: 10px;
+  }
+  span{
+   cursor: pointer;
+   font-size: 15px;
+   position: absolute;
+   top: -4px;
+   right: -16px;
+  }
+ }
+ &-content{
+  font-size: 16px;
+  font-family: "OpenSans-SemiBold",sans-serif;
+  margin: .5rem 0;
+ }
+ &-info{
+  font-size: 12px;
  }
 }

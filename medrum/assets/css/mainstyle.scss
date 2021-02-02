@@ -25,10 +25,7 @@ main{
    padding: 25px;
    @include stylescroll($darkredbase,$darktiny);
    h2{
-    margin-bottom: 1rem;
-    font-weight: 600;
-    font-size: $size35;
-    font-family: "OpenSans-SemiBold", sans-serif;
+    @include styletitle();
    }
   }
 
@@ -41,10 +38,7 @@ main{
    padding: 25px;
    @include stylescroll($darkredbase,$darktiny);
    h2{
-    margin-bottom: 1rem;
-    font-weight: 600;
-    font-size: $size35;
-    font-family: "OpenSans-SemiBold", sans-serif;
+    @include styletitle();
    }
   }
 
@@ -57,10 +51,7 @@ main{
    padding: 25px;
    @include stylescroll($darkredbase,$darktiny);
    h2{
-    margin-bottom: 1rem;
-    font-weight: 600;
-    font-size: $size35;
-    font-family: "OpenSans-SemiBold", sans-serif;
+    @include styletitle();
    }
   }
 
@@ -108,10 +99,7 @@ main{
    padding: 25px;
    @include stylescroll($darkredbase,$darktiny);
    h2{
-    margin-bottom: 1rem;
-    font-weight: 600;
-    font-size: $size35;
-    font-family: "OpenSans-SemiBold", sans-serif;
+    @include styletitle();
    }
   }
 
@@ -124,10 +112,7 @@ main{
    padding: 25px;
    @include stylescroll($darkredbase,$darktiny);
    h2{
-    margin-bottom: 1rem;
-    font-weight: 600;
-    font-size: $size35;
-    font-family: "OpenSans-SemiBold", sans-serif;
+    @include styletitle();
    }
   }
 
@@ -360,7 +345,7 @@ main{
 }
 
 .modal-content{
- background: $darkbase;
+ background: $darktiny;
  .modal-header{
   border: none;
   color: $whitetext;
@@ -374,6 +359,9 @@ main{
   right: 0;
   margin: 0 ;
  }
+}
+.modal-backdrop{
+ z-index: -1;
 }
 
 .container-questions {
@@ -560,5 +548,23 @@ main{
  }
  &-info{
   font-size: 12px;
+ }
+}
+
+#callbackForm_forms_flash{
+ display: none;
+ .alert-success{
+  padding: 10px 20px;
+  text-align: center;
+  color: $colorwa;
+  background: $darkmiddle;
+  border: 1px solid $colorwa;
+  margin: 0 auto;
+  p{
+   margin: 0;
+  }
+   .close{
+    display: none;
+   }
  }
 }

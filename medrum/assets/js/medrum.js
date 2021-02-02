@@ -1,11 +1,4 @@
 $(document).ready(function(){
-    $('#checkbox').on('click', function () {
-        if ( $(this).is(':checked') ) {
-            $('#butdis').attr('disabled', false);
-        } else {
-            $('#butdis').attr('disabled', true);
-        }
-    });
 
     // const counter = document.querySelector(".counter");
     // let count = 0;
@@ -39,6 +32,13 @@ $(document).ready(function(){
     LocationHref();
 
     /* End if */
+    const time = 1;
+    function timer(value){
+        return setTimeout(function() {
+            const newTime = value + 1;
+            if(newTime != 0) timer();
+        }, 1000);;
+    }
 
     $('.text-copy').click(function(){
         $('.message').remove();
@@ -48,10 +48,22 @@ $(document).ready(function(){
         $temp.val($(this).text()).select();
         document.execCommand("copy");
         $temp.remove();
-        $('.container-main-debtors').append('<div class="message"><div class="message-header"><p>Сообщение</p><p>1с. назад</p><span class="message-close">x</span></div><div class="message-content">'+ text +'</div><div class="message-info">Вы успешно скопировали</div></div>');
+        $('.container-main-debtors').append('<div class="message"><div class="message-header"><p>Сообщение</p><p>'+ timer(1) +' назад</p><span class="message-close">x</span></div><div class="message-content">'+ text +'</div><div class="message-info">Вы успешно скопировали</div></div>');
 
         $('.message-close').click(function(){
             $('.message').remove();
         })
     });
+    setTimeout(function(){
+        $(".message").remove();
+    }, 10000);
+
+    $('form').submit(function(){
+        $(this).delay(500).fadeOut(1000);
+        $(this).animate({ "opacity" : "0", },{ "complete" : function() { $(this).remove(); } });
+        $('#callbackForm_forms_flash').delay(1500).fadeIn(500);
+    });
+
+    $("#phone").mask("+7 (999) 999-99-99");
+
 });

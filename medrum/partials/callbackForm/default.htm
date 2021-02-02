@@ -1,26 +1,11 @@
-[viewBag]
-
-[emptyForm]
-messages_success = "Ваша форма была успешно отправлена!"
-messages_errors = "В вашей заявке содержатся ошибки."
-inline_errors = "disabled"
-sanitize_data = "disabled"
-anonymize_ip = "disabled"
-recaptcha_theme = "light"
-recaptcha_type = "image"
-recaptcha_size = "normal"
-emails_date_format = "Y-m-d"
-==
+<div id="{{ __SELF__ }}_forms_flash"></div>
 <form class="container-questions" data-request="{{ __SELF__ }}::onFormSubmit">
     {{ form_token() }}
-
-    <div id="{{ __SELF__ }}_forms_flash"></div>
-
     <div class="container-form-items">
         <label for="name">Ваше имя и фамилия</label>
-        <input id="name" name="name" type="text" class="header-modal-input first-child">
+        <input id="name" required name="name" type="text" class="header-modal-input first-child" pattern="^[А-Яа-яЁё\s]+$">
         <label for="email">Ваш e-mail</label>
-        <input id="email" required name="email" type="email" class="header-modal-input">
+        <input id="email" required name="email" type="email" class="header-modal-input" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})">
         <label for="phone">Ваш контактный номер</label>
         <input id="phone" required name="phone" type="tel" class="header-modal-input">
         <label for="message">Текст вопроса</label>
@@ -29,6 +14,6 @@ emails_date_format = "Y-m-d"
             <input id="checkbox" name="accept" type="checkbox">
             <span>Даю согласие на обработку персональных данных</span>
         </label>
-        <button id="butdis" class="header-modal-submit button btn btn-outline-dark" type="submit" disabled>Отправить</button>
+        <button id="butdis simpleContactSubmitButton" class="btn btn-info" type="submit">Отправить</button>
     </div>
 </form>

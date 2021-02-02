@@ -32,6 +32,10 @@ header {
     top: 0;
     width: 100%;
     background: $darkmiddle;
+    a.logo{
+      text-decoration: none;
+      color: inherit;
+    }
     @include mediaMaxW(768px){
       display: none;
     }

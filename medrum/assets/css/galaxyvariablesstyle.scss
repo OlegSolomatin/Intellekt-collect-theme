@@ -56,9 +56,9 @@ $gradientHW: transparent linear-gradient(145deg, #3C016D 0%, #D060F2 100%) 0% 0%
 $gradientWh: transparent linear-gradient(104deg, #3C016D 0%, #D060F2 100%) 0% 0% no-repeat padding-box;
 
 @mixin flex {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 @mixin flex-shrink($num) {
   -ms-flex-negative: $num;
@@ -250,7 +250,7 @@ $gradientWh: transparent linear-gradient(104deg, #3C016D 0%, #D060F2 100%) 0% 0%
 }
 
 @mixin stylebutton {
-  padding: clamp(5px, 0.8vw, 15px) clamp(10px, 1.5vw, 29px);
+  padding: 7.5px 15px;
   background: $gradientWh;
   color: $whitetext;
   font-size: $size20;
@@ -258,7 +258,7 @@ $gradientWh: transparent linear-gradient(104deg, #3C016D 0%, #D060F2 100%) 0% 0%
   text-decoration: none;
   font-family: 'OpenSans-SemiBold', sans-serif;
   transition: .8s;
-  width: fit-content;
+  width: auto;
   border: none;
   &:hover{
     color: $yellowtext;
@@ -266,31 +266,11 @@ $gradientWh: transparent linear-gradient(104deg, #3C016D 0%, #D060F2 100%) 0% 0%
 }
 
 @mixin styletitle{
-  color: $fioltext;
-  font-size: $size38;
-  position: relative;
+  margin-bottom: 1rem;
   font-weight: 600;
-  &:before {
-    content: "";
-    border-bottom: 2px solid $yellowtext;
-    border-top: 2px solid $yellowtext;
-    width: 40px;
-    height: 14px;
-    position: absolute;
-    top: calc(0.45em - 1px);
-    margin-left: -50px;
-
-  }
-  &:after {
-    content: "";
-    border-bottom: 2px solid $yellowtext;
-    border-top: 2px solid $yellowtext;
-    width: 40px;
-    height: 14px;
-    position: absolute;
-    top: calc(0.45em - 1px);
-    margin-left: 10px;
-  }
+  font-size: $size35;
+  font-family: "OpenSans-SemiBold", sans-serif;
+  line-height: 1.5;
 }
 
 @mixin stylesociallink($color){

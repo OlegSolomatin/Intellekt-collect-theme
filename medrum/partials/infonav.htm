@@ -8,18 +8,6 @@ noPostsMessage = "Записей не найдено"
 sortOrder = "published_at desc"
 categoryPage = "contacts"
 postPage = "contacts"
-
-[emptyForm callbackForm]
-group = "Заявка на обратный звонок"
-messages_success = "Ваша форма была успешно отправлена!"
-messages_errors = "В вашей заявке содержатся ошибки."
-inline_errors = "disabled"
-sanitize_data = "disabled"
-anonymize_ip = "disabled"
-recaptcha_theme = "light"
-recaptcha_type = "image"
-recaptcha_size = "normal"
-emails_date_format = "Y-m-d"
 ==
 <?php
 function onStart()
@@ -32,30 +20,24 @@ $this->addJs('assets/js/medrum.js');
 {% set posts = blogPosts.posts %}
 <div class="container-main-info">
     {% for post in posts %}
-    <div class="info-item">
-        <a href="{{post.content}}">
-            {{post.content_html|raw}}
-        </a>
-    </div>
+    {{post.content_html|raw}}
     {% endfor %}
-
-    <!-- Button trigger modal -->
     <button type="button" class="btn btn-primary btn-danger" data-toggle="modal" data-target="#exampleModal">
         Связаться с нами
     </button>
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Оставьте Ваши контактные данные и наша служба поддержки свяжется с Вами</h5>
-                    <button type="button" class="close btn btn-danger" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    {% partial 'callbackForm/default' %}
+                {% component 'callbackForm' %}
                 </div>
             </div>
         </div>

@@ -2,6 +2,10 @@
 
 header {
   width: 200px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
   @include flex();
   @include align-items-center();
   @include flex-coldirection();
@@ -49,7 +53,7 @@ header {
     height: 100vh;
     @include mediaMaxW(768px){
       width: 100%;
-      height: fit-content;
+      height: auto;
     }
   }
 
@@ -181,7 +185,7 @@ header {
       }
     }
     .nav {
-      display: inline-block;
+      @include flex();
       pointer-events: none;
       @include flex-coldirection();
       @include align-items-end();

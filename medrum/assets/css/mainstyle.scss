@@ -4,10 +4,7 @@
 @import "footerstyle";
 
 main{
- width: calc(100% - 200px);
- @include mediaMaxW(768px){
-  width: 100%;
- }
+ width: 100%;
  .container-main{
   @include flex();
   @include flex-coldirection();
@@ -24,6 +21,8 @@ main{
    @include align-items-start();
    padding: 25px;
    @include stylescroll($darkredbase,$darktiny);
+   @include mediaMaxW(768px){
+    overflow: inherit !important;   }
    h2{
     @include styletitle();
    }
@@ -37,6 +36,8 @@ main{
    @include align-items-start();
    padding: 25px;
    @include stylescroll($darkredbase,$darktiny);
+   @include mediaMaxW(768px){
+    overflow: inherit !important;   }
    h2{
     @include styletitle();
    }
@@ -50,6 +51,8 @@ main{
    @include align-items-start();
    padding: 25px;
    @include stylescroll($darkredbase,$darktiny);
+   @include mediaMaxW(768px){
+    overflow: inherit !important;   }
    h2{
     @include styletitle();
    }
@@ -60,20 +63,24 @@ main{
    height: 68px;
    line-height: 68px;
    background: $darkmiddle;
-   /*position: sticky;
-   top: 0;*/
    @include flex();
    @include flex-rowdirection();
    @include align-items-center();
    @include justify-content-end();
    padding-right: 4vw;
    @include mediaMaxW(768px){
-    padding-right: 3vw;
+    line-height: 1;
+    @include justify-content-between();
+    padding: 5px 3vw;
    }
    .info-item{
     margin-left: 2rem;
     @include flex();
     @include align-items-center();
+    @include mediaMaxW(768px){
+     margin: 0;
+     font-size: 14px;
+    }
     a{
      color: inherit;
      text-decoration: none;
@@ -87,6 +94,11 @@ main{
    }
    .btn-danger{
     margin-left: 2rem;
+    @include mediaMaxW(768px){
+     margin: 0;
+     width: min-content;
+     line-height: 1;
+    }
    }
   }
 
@@ -98,6 +110,8 @@ main{
    @include align-items-start();
    padding: 25px;
    @include stylescroll($darkredbase,$darktiny);
+   @include mediaMaxW(768px){
+    overflow: inherit !important;   }
    h2{
     @include styletitle();
    }
@@ -111,6 +125,9 @@ main{
    @include align-items-start();
    padding: 25px;
    @include stylescroll($darkredbase,$darktiny);
+   @include mediaMaxW(768px){
+    overflow: inherit !important;
+   }
    h2{
     @include styletitle();
    }
@@ -153,6 +170,9 @@ main{
  border: 1px solid transparent;
  border-radius: 15px;
  transition: $transition-duration;
+ @include mediaMaxW(768px){
+  width: 100%;
+ }
  &:hover{
   border: 1px solid white;
   border-radius: 15px;
@@ -166,6 +186,8 @@ main{
     width: 5vw !important;
     height: 4vw;
     color: $whitetext;
+    min-width: 50px;
+    min-height: 50px;
    }
   }
  }
@@ -182,6 +204,8 @@ main{
     width: 5vw !important;
     height: 4vw;
     color: $whitetext;
+    min-width: 50px;
+    min-height: 50px;
    }
   }
  }
@@ -198,6 +222,8 @@ main{
      width: 5vw !important;
      height: 4vw;
      color: $whitetext;
+     min-width: 50px;
+     min-height: 50px;
     }
    }
   }
@@ -219,6 +245,9 @@ main{
  @include flex();
  @include align-items-center();
  @include flex-coldirection();
+ @include mediaMaxW(768px){
+  margin: 10px 0;
+ }
  &:hover{
   transform: translateY(5px);
   transition: $transition-duration;
@@ -253,6 +282,9 @@ main{
    color: $darkredbase;
   }
  }
+ @include mediaMaxW(768px){
+  width: 100% !important;
+ }
 }
 
 .container-services-item{
@@ -266,6 +298,9 @@ main{
  border: 1px solid transparent;
  border-radius: 15px;
  transition: $transition-duration;
+ @include mediaMaxW(768px){
+  width: 100%;
+ }
  &:hover{
   border: 1px solid white;
   border-radius: 15px;
@@ -300,8 +335,14 @@ main{
  @include flex();
  @include justify-content-between();
  @include align-items-center();
+ @include mediaMaxW(768px){
+  @include flex-coldirection();
+ }
  .debtor{
  margin-right: 75px;
+  @include mediaMaxW(768px){
+   margin: 0;
+  }
   .title{
    font-size: $size28;
    line-height: 1.5;

@@ -471,24 +471,18 @@ $gradientWh: transparent linear-gradient(104deg, #3C016D 0%, #D060F2 100%) 0% 0%
 
 @media (prefers-color-scheme: light) {
   body{
-    background-color: #373e57;
     color: #ccc8db;
+    font-size: 16px;
+    margin-top: 0;
+    margin-left: 200px;
+    background: #1c1e21;
+    font-family: 'OpenSans-Regular', sans-serif;
+    @include stylescroll($darkredhover,$darktiny);
     :root {
       --delay: 0s;
     }
-  }
-  .main-container{
-    margin: 0 auto !important;
-    padding: 0 !important;
-    background: #1c1e21 !important;
-    font-family: 'OpenSans-Regular', sans-serif;
-    @include stylescroll($darkredbase,$darkmiddle);
-    @include flex();
-    height: 100vh;
-    max-width: 1920px;
     @include mediaMaxW(768px){
-      @include flex-coldirection();
-      overflow: hidden;
+      margin: 0;
     }
   }
 }
@@ -496,25 +490,18 @@ $gradientWh: transparent linear-gradient(104deg, #3C016D 0%, #D060F2 100%) 0% 0%
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
   body{
-    background-color: #373e57;
     color: #ccc8db;
-    font-
+    font-size: 16px;
+    margin-top: 0;
+    margin-left: 200px;
+    background: #1c1e21;
+    font-family: 'OpenSans-Regular', sans-serif;
+    @include stylescroll($darkredhover,$darktiny);
     :root {
       --delay: 0s;
     }
-  }
-  .main-container{
-    margin: 0 auto !important;
-    padding: 0 !important;
-    background: #1c1e21 !important;
-    font-family: 'OpenSans-Regular', sans-serif;
-    @include flex();
-    @include stylescroll($darkredhover,$darktiny);
-    height: 100vh;
-    max-width: 1920px;
     @include mediaMaxW(768px){
-      @include flex-coldirection();
-      overflow: hidden;
+      margin: 0;
     }
   }
 }

@@ -1,5 +1,7 @@
-@import "galaxyvariablesstyle";
 @charset "UTF-8";
+@import "galaxyvariablesstyle";
+@import "headerstyle";
+@import "footerstyle";
 
 main{
  width: calc(100% - 200px);

@@ -1,196 +1,165 @@
 @charset "UTF-8";
-@import "../libs/fontawesome-free-5.15.1-web/css/all.css";
+@import url(../libs/fontawesome-free-5.15.1-web/css/all.css);
 @font-face {
   font-family: "OpenSans-Bold";
   src: url("../fonts/OpenSans-Bold.woff2") format("woff2");
   /* Modern Browsers */
   font-weight: normal;
-  font-style: normal;
-}
+  font-style: normal; }
 @font-face {
   font-family: "OpenSans-BoldItalic";
   src: url("../fonts/OpenSans-BoldItalic.woff2") format("woff2");
   /* Modern Browsers */
   font-weight: normal;
-  font-style: normal;
-}
+  font-style: normal; }
 @font-face {
   font-family: "OpenSans-ExtraBold";
   src: url("../fonts/OpenSans-ExtraBold.woff2") format("woff2");
   /* Modern Browsers */
   font-weight: normal;
-  font-style: normal;
-}
+  font-style: normal; }
 @font-face {
   font-family: "OpenSans-ExtraBoldItalic";
   src: url("../fonts/OpenSans-ExtraBoldItalic.woff2") format("woff2");
   /* Modern Browsers */
   font-weight: normal;
-  font-style: normal;
-}
+  font-style: normal; }
 @font-face {
   font-family: "OpenSans-Italic";
   src: url("../fonts/OpenSans-Italic.woff2") format("woff2");
   /* Modern Browsers */
   font-weight: normal;
-  font-style: normal;
-}
+  font-style: normal; }
 @font-face {
   font-family: "OpenSans-Light";
   src: url("../fonts/OpenSans-Light.woff2") format("woff2");
   /* Modern Browsers */
   font-weight: normal;
-  font-style: normal;
-}
+  font-style: normal; }
 @font-face {
   font-family: "OpenSans-LightItalic";
   src: url("../fonts/OpenSans-LightItalic.woff2") format("woff2");
   /* Modern Browsers */
   font-weight: normal;
-  font-style: normal;
-}
+  font-style: normal; }
 @font-face {
   font-family: "OpenSans-Regular";
   src: url("../fonts/OpenSans-Regular.woff2") format("woff2");
   /* Modern Browsers */
   font-weight: normal;
-  font-style: normal;
-}
+  font-style: normal; }
 @font-face {
   font-family: "OpenSans-SemiBold";
   src: url("../fonts/OpenSans-SemiBold.woff2") format("woff2");
   /* Modern Browsers */
   font-weight: normal;
-  font-style: normal;
-}
+  font-style: normal; }
 @media (prefers-color-scheme: light) {
   body {
     background-color: #373e57;
-    color: #ccc8db;
-  }
-  body :root {
-    --delay: 0s;
-  }
+    color: #ccc8db; }
+    body :root {
+      --delay: 0s; }
 
   .main-container {
     margin: 0 auto !important;
     padding: 0 !important;
     background: #1c1e21 !important;
-    font-family: "OpenSans-Regular", sans-serif;
+    font-family: 'OpenSans-Regular', sans-serif;
     overflow-x: hidden !important;
     overflow: auto;
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
     height: 100vh;
-    max-width: 1920px;
-  }
-  .main-container::-webkit-scrollbar-button {
-    background-image: url("");
-    background-repeat: no-repeat;
-    width: 6px;
-    height: 0;
-  }
-  .main-container::-webkit-scrollbar-track {
-    background-color: #3A3B3C;
-  }
-  .main-container::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 15px;
-    border-radius: 15px;
-    background-color: #F23E5C;
-    box-shadow: 0 1px 1px #fff inset;
-    background-image: url("https://yraaa.ru/_pu/24/59610063.png");
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  .main-container::-webkit-resizer {
-    background-image: url("");
-    background-repeat: no-repeat;
-    width: 7px;
-    height: 0;
-  }
-  .main-container::-webkit-scrollbar {
-    width: 11px;
-  }
-}
-@media screen and (prefers-color-scheme: light) and (max-width: 768px) {
-  .main-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    overflow: hidden;
-  }
-}
+    max-width: 1920px; }
+    .main-container::-webkit-scrollbar-button {
+      background-image: url("");
+      background-repeat: no-repeat;
+      width: 6px;
+      height: 0; }
+    .main-container::-webkit-scrollbar-track {
+      background-color: #3A3B3C; }
+    .main-container::-webkit-scrollbar-thumb {
+      -webkit-border-radius: 15px;
+      border-radius: 15px;
+      background-color: #F23E5C;
+      box-shadow: 0 1px 1px #fff inset;
+      background-image: url("https://yraaa.ru/_pu/24/59610063.png");
+      background-position: center;
+      background-repeat: no-repeat; }
+    .main-container::-webkit-resizer {
+      background-image: url("");
+      background-repeat: no-repeat;
+      width: 7px;
+      height: 0; }
+    .main-container::-webkit-scrollbar {
+      width: 11px; } }
+  @media screen and (prefers-color-scheme: light) and (max-width: 768px) {
+    .main-container {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      overflow: hidden; } }
+
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #373e57;
-    color: #ccc8db;
-  }
-  body :root {
-    --delay: 0s;
-  }
+    color: #ccc8db; }
+    body :root {
+      --delay: 0s; }
 
   .main-container {
     margin: 0 auto !important;
     padding: 0 !important;
     background: #1c1e21 !important;
-    font-family: "OpenSans-Regular", sans-serif;
+    font-family: 'OpenSans-Regular', sans-serif;
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
     overflow-x: hidden !important;
     overflow: auto;
     height: 100vh;
-    max-width: 1920px;
-  }
-  .main-container::-webkit-scrollbar-button {
-    background-image: url("");
-    background-repeat: no-repeat;
-    width: 6px;
-    height: 0;
-  }
-  .main-container::-webkit-scrollbar-track {
-    background-color: #444546;
-  }
-  .main-container::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 15px;
-    border-radius: 15px;
-    background-color: #832132;
-    box-shadow: 0 1px 1px #fff inset;
-    background-image: url("https://yraaa.ru/_pu/24/59610063.png");
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  .main-container::-webkit-resizer {
-    background-image: url("");
-    background-repeat: no-repeat;
-    width: 7px;
-    height: 0;
-  }
-  .main-container::-webkit-scrollbar {
-    width: 11px;
-  }
-}
-@media screen and (prefers-color-scheme: dark) and (max-width: 768px) {
-  .main-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    overflow: hidden;
-  }
-}
+    max-width: 1920px; }
+    .main-container::-webkit-scrollbar-button {
+      background-image: url("");
+      background-repeat: no-repeat;
+      width: 6px;
+      height: 0; }
+    .main-container::-webkit-scrollbar-track {
+      background-color: #444546; }
+    .main-container::-webkit-scrollbar-thumb {
+      -webkit-border-radius: 15px;
+      border-radius: 15px;
+      background-color: #832132;
+      box-shadow: 0 1px 1px #fff inset;
+      background-image: url("https://yraaa.ru/_pu/24/59610063.png");
+      background-position: center;
+      background-repeat: no-repeat; }
+    .main-container::-webkit-resizer {
+      background-image: url("");
+      background-repeat: no-repeat;
+      width: 7px;
+      height: 0; }
+    .main-container::-webkit-scrollbar {
+      width: 11px; } }
+  @media screen and (prefers-color-scheme: dark) and (max-width: 768px) {
+    .main-container {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      overflow: hidden; } }
+
 label {
-  margin: 0;
-}
+  margin: 0; }
 
 ul, li, ol {
   list-style: none;
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
 
 h1, h2, h3, h4, h5, h6 {
   border: none;
@@ -201,17 +170,14 @@ h1, h2, h3, h4, h5, h6 {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  line-height: 1.2;
-}
-h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
-  content: none;
-}
-h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
-  content: none;
-}
+  line-height: 1.2; }
+  h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
+    content: none; }
+  h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
+    content: none; }
 
 .lost-image-min {
-  font-family: "Helvetica";
+  font-family: 'Helvetica';
   font-weight: 300;
   line-height: 1.2;
   text-align: center;
@@ -220,27 +186,25 @@ h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
   height: auto;
   display: block;
   position: relative;
-  min-height: 50px;
-}
-.lost-image-min:after {
-  content: "" " Картинка потерялась";
-  display: block;
-  font-size: 16px;
-  font-style: normal;
-  font-family: "Font Awesome 5 Free";
-  color: #646464;
-  position: absolute;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  height: auto;
-  background-color: #e6e6e6;
-  border: 2px dotted #c8c8c8;
-  border-radius: 5px;
-}
+  min-height: 50px; }
+  .lost-image-min:after {
+    content: "" " ╨Ъ╨░╤А╤В╨╕╨╜╨║╨░ ╨┐╨╛╤В╨╡╤А╤П╨╗╨░╤Б╤М";
+    display: block;
+    font-size: 16px;
+    font-style: normal;
+    font-family: "Font Awesome 5 Free";
+    color: #646464;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    height: auto;
+    background-color: #e6e6e6;
+    border: 2px dotted #c8c8c8;
+    border-radius: 5px; }
 
 .lost-image {
-  font-family: "Helvetica";
+  font-family: 'Helvetica';
   font-weight: 300;
   line-height: 1.2;
   text-align: center;
@@ -249,53 +213,44 @@ h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
   display: block;
   position: relative;
   min-height: 50px;
-  content: " ";
-}
-.lost-image:before {
-  content: " ";
-  display: block;
-  position: absolute;
-  left: 0;
-  height: calc(100% + 40px);
-  width: 100%;
-  background-color: #e6e6e6;
-  border: 2px dotted #c8c8c8;
-  border-radius: 5px;
-}
-.lost-image:after {
-  content: " Наша картинка " attr(alt) " потерялась, мы скоро все исправим :) ";
-  display: block;
-  font-size: 16px;
-  font-style: normal;
-  font-family: "Font Awesome 5 Free";
-  color: #646464;
-  position: absolute;
-  top: 15px;
-  left: 0;
-  width: 100%;
-  text-align: center;
-}
+  content: " "; }
+  .lost-image:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 0;
+    height: calc(100% + 40px);
+    width: 100%;
+    background-color: #e6e6e6;
+    border: 2px dotted #c8c8c8;
+    border-radius: 5px; }
+  .lost-image:after {
+    content: " ╨Э╨░╤И╨░ ╨║╨░╤А╤В╨╕╨╜╨║╨░ " attr(alt) " ╨┐╨╛╤В╨╡╤А╤П╨╗╨░╤Б╤М, ╨╝╤Л ╤Б╨║╨╛╤А╨╛ ╨▓╤Б╨╡ ╨╕╤Б╨┐╤А╨░╨▓╨╕╨╝ :) ";
+    display: block;
+    font-size: 16px;
+    font-style: normal;
+    font-family: "Font Awesome 5 Free";
+    color: #646464;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    text-align: center; }
 
 @keyframes left {
   0% {
     transform: translateX(-30px);
-    opacity: 0;
-  }
+    opacity: 0; }
   100% {
     opacity: 1;
-    transform: none;
-  }
-}
+    transform: none; } }
 @keyframes top {
   0% {
     transform: translateY(-30px);
-    opacity: 0;
-  }
+    opacity: 0; }
   100% {
     opacity: 1;
-    transform: none;
-  }
-}
+    transform: none; } }
 footer {
   width: 100%;
   padding: 0px 0px 70px;
@@ -307,31 +262,27 @@ footer {
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
-}
-footer .container-footer-nav {
-  padding: 0 5vw;
-  max-width: 1920px;
-  width: 100%;
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-}
-@media screen and (max-width: 1368px) {
+  align-items: center; }
   footer .container-footer-nav {
-    padding: 0 3vw;
-  }
-}
+    padding: 0 5vw;
+    max-width: 1920px;
+    width: 100%;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: relative; }
+    @media screen and (max-width: 1368px) {
+      footer .container-footer-nav {
+        padding: 0 3vw; } }
 
 /*# sourceMappingURL=footerstyle.css.map */

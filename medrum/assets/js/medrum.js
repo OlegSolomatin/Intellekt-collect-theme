@@ -15,12 +15,16 @@ $(document).ready(function(){
         if (!menuOpen){
             $(this).addClass('open');
             $('body').css('overflow' , 'hidden');
-            $('.nav').slideDown(500, function (){$(this).css('display', 'flex')});
+            $('.nav').slideDown(200, function (){$(this).css('display', 'flex')});
+            $('.nav-item').css('display', 'block');
+            $('.container-header-info').css('display', 'flex');
             menuOpen = true;
         } else {
             $(this).removeClass('open');
-            $('.nav').slideUp(500);
-            setTimeout(function(){$('body').css('overflow' , 'auto')},500);
+            $('.nav-item').css('display', 'none');
+            $('.container-header-info').css('display', 'none');
+            $('.nav').slideUp(200);
+            setTimeout(function(){$('body').css('overflow' , 'auto')},300);
             menuOpen = false;
         }
     });

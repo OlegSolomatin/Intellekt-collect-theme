@@ -72,6 +72,7 @@ header {
       height: calc(100vh - 80px);
       text-align: center;
       @include align-items-center();
+      animation: show 2s both;
     }
   }
 }

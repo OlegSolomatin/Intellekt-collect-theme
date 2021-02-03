@@ -58,6 +58,11 @@ header {
       width: auto;
       font-size: 24px;
     }
+    @include mediaMaxW(550px){
+      height: 50px;
+      line-height: 50px;
+      font-size: 20px;
+    }
   }
   .container-header-nav{
     width: 200px;
@@ -74,6 +79,9 @@ header {
       @include align-items-center();
       animation: show 2s both;
     }
+    @include mediaMaxW(550px){
+      height: calc(100vh - 50px);
+    }
   }
 }
 
@@ -88,6 +96,9 @@ header {
     bottom: 0;
     margin-bottom: 2rem;
   }
+  @include mediaMaxW(550px){
+    width: 90%;
+  }
   .info-item{
     @include flex();
     @include align-items-center();
@@ -95,6 +106,9 @@ header {
       color: #dc3545;
       text-decoration: none;
       font-size: 1.5rem;
+      @include mediaMaxW(550px){
+        font-size: 1rem;
+      }
       &:hover{
         color: $linkcolor;
       }
@@ -157,7 +171,10 @@ header {
   height: 80px;
   cursor: pointer;
   transition: all .5s ease-in-out;
-  /* border: 3px solid #fff; */
+  @include mediaMaxW(550px){
+    width: 35px;
+    height: 50px;
+  }
 }
 .menu-btn__burger {
   width: 50px;
@@ -166,6 +183,10 @@ header {
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(255,101,47,.2);
   transition: all .5s ease-in-out;
+  @include mediaMaxW(550px){
+    width: 35px;
+    height: 4px;
+  }
 }
 .menu-btn__burger::before,
 .menu-btn__burger::after {
@@ -177,12 +198,22 @@ header {
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(255,101,47,.2);
   transition: all .5s ease-in-out;
+  @include mediaMaxW(550px){
+    width: 35px;
+    height: 4px;
+  }
 }
 .menu-btn__burger::before {
   transform: translateY(-16px);
+  @include mediaMaxW(550px){
+    transform: translateY(-10px);
+  }
 }
 .menu-btn__burger::after {
   transform: translateY(16px);
+  @include mediaMaxW(550px){
+    transform: translateY(10px);
+  }
 }
 /* ANIMATION */
 .menu-btn.open .menu-btn__burger {

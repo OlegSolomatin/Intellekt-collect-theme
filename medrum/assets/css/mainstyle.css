@@ -628,6 +628,11 @@ header {
         line-height: 80px;
         width: auto;
         font-size: 24px; } }
+    @media screen and (max-width: 550px) {
+      header .container-header-logo {
+        height: 50px;
+        line-height: 50px;
+        font-size: 20px; } }
   header .container-header-nav {
     width: 200px;
     display: -webkit-box;
@@ -654,6 +659,9 @@ header {
         -ms-flex-align: center;
         align-items: center;
         animation: show 2s both; } }
+    @media screen and (max-width: 550px) {
+      header .container-header-nav {
+        height: calc(100vh - 50px); } }
 
 .container-header-info {
   display: none; }
@@ -672,6 +680,9 @@ header {
       position: absolute;
       bottom: 0;
       margin-bottom: 2rem; } }
+  @media screen and (max-width: 550px) {
+    .container-header-info {
+      width: 90%; } }
   .container-header-info .info-item {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -683,6 +694,9 @@ header {
       color: #dc3545;
       text-decoration: none;
       font-size: 1.5rem; }
+      @media screen and (max-width: 550px) {
+        .container-header-info .info-item a {
+          font-size: 1rem; } }
       .container-header-info .info-item a:hover {
         color: #D6D7DB; }
 
@@ -731,11 +745,14 @@ header {
   width: 50px;
   height: 80px;
   cursor: pointer;
-  transition: all .5s ease-in-out;
-  /* border: 3px solid #fff; */ }
+  transition: all .5s ease-in-out; }
   @media (min-width: 769px) {
     .menu-btn {
       display: none; } }
+  @media screen and (max-width: 550px) {
+    .menu-btn {
+      width: 35px;
+      height: 50px; } }
 
 .menu-btn__burger {
   width: 50px;
@@ -744,6 +761,10 @@ header {
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
   transition: all .5s ease-in-out; }
+  @media screen and (max-width: 550px) {
+    .menu-btn__burger {
+      width: 35px;
+      height: 4px; } }
 
 .menu-btn__burger::before,
 .menu-btn__burger::after {
@@ -755,12 +776,23 @@ header {
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
   transition: all .5s ease-in-out; }
+  @media screen and (max-width: 550px) {
+    .menu-btn__burger::before,
+    .menu-btn__burger::after {
+      width: 35px;
+      height: 4px; } }
 
 .menu-btn__burger::before {
   transform: translateY(-16px); }
+  @media screen and (max-width: 550px) {
+    .menu-btn__burger::before {
+      transform: translateY(-10px); } }
 
 .menu-btn__burger::after {
   transform: translateY(16px); }
+  @media screen and (max-width: 550px) {
+    .menu-btn__burger::after {
+      transform: translateY(10px); } }
 
 /* ANIMATION */
 .menu-btn.open .menu-btn__burger {

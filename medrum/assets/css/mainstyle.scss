@@ -316,6 +316,14 @@ main{
  -webkit-transition: $transition-duration;
  -o-transition: $transition-duration;
  transition: $transition-duration;
+ &:first-child{
+  .header-section{
+   svg{
+    width: 7vw;
+    height: 7vw;
+   }
+  }
+ }
  @include mediaMaxW(768px){
   width: 100%;
  }
@@ -328,7 +336,7 @@ main{
   @include align-items-center();
   margin-bottom: 1rem;
   svg{
-   width: 5vw !important;
+   width: 5vw;
    height: 4vw;
    color: $whitetext;
   }

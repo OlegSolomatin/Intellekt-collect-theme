@@ -1,5 +1,30 @@
 $(document).ready(function(){
 
+    // const menuBtn = document.querySelector('.menu-btn');
+    // menuBtn.addEventListener('click', () => {
+    //     if(!menuOpen) {
+    //         menuBtn.classList.add('open');
+    //         menuOpen = true;
+    //     } else {
+    //         menuBtn.classList.remove('open');
+    //         menuOpen = false;
+    //     }
+    // });
+    let menuOpen = false;
+    $('.menu-btn').click(function(){
+        if (!menuOpen){
+            $(this).addClass('open');
+            $('body').css('overflow' , 'hidden');
+            $('.nav').slideDown(500, function (){$(this).css('display', 'flex')});
+            menuOpen = true;
+        } else {
+            $(this).removeClass('open');
+            $('.nav').slideUp(500);
+            setTimeout(function(){$('body').css('overflow' , 'auto')},500);
+            menuOpen = false;
+        }
+    });
+
     // const counter = document.querySelector(".counter");
     // let count = 0;
     // setInterval(() => {
@@ -14,22 +39,25 @@ $(document).ready(function(){
     /* При добавлении новой страницы в CMS необходимо назначить класс, и добавить подсвет через IF ниже*/
 
     let hreflocal = window.location.pathname;
+    let width = $('body').innerWidth();
 
-    function LocationHref() {
-        if (hreflocal.lastIndexOf("services") >= 1)  {
+    function LocationHref(width) {
+        if (hreflocal.lastIndexOf("services") >= 1 && width > 768)  {
             $('.services').addClass('nav-item-active');
-        } else if (hreflocal.lastIndexOf("debtors") >= 1) {
+        } else if (hreflocal.lastIndexOf("debtors") >= 1 && width > 768) {
             $('.debtors').addClass('nav-item-active');
-        } else if (hreflocal.lastIndexOf("aboutus") >= 1) {
+        } else if (hreflocal.lastIndexOf("aboutus") >= 1 && width > 768) {
             $('.aboutus').addClass('nav-item-active');
-        } else if (hreflocal.lastIndexOf("contacts") >= 1) {
+        } else if (hreflocal.lastIndexOf("contacts") >= 1 && width > 768) {
             $('.contacts').addClass('nav-item-active');
-        }else {
+        } else if (width > 768) {
             $('.index').addClass('nav-item-active');
+        } else {
+            $('div').removeClass('nav-item-active');
         }
     }
 
-    LocationHref();
+    LocationHref(width);
 
     /* End if */
     const time = 1;
@@ -54,6 +82,7 @@ $(document).ready(function(){
             $('.message').remove();
         })
     });
+
     setTimeout(function(){
         $(".message").remove();
     }, 10000);

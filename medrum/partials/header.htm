@@ -1,16 +1,29 @@
 [viewBag]
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "Contacts"
+postsPerPage = 2
+noPostsMessage = "Записей не найдено"
+sortOrder = "published_at desc"
+categoryPage = "contacts"
+postPage = "contacts"
 ==
 <div class="container-header-logo">
     <a href="{{'main' | page}}" class="logo">
         Интеллект-коллект
     </a>
 </div>
-<input id="toggle" type="checkbox">
-<label class="toggle-container" for="toggle">
-    <span class="button button-toggle"></span>
-</label>
+<div class="menu-btn">
+    <div class="menu-btn__burger"></div>
+</div>
 <div class="container-header-nav nav">
     {% for item in itemsmenu %}
     <a class="nav-item {{item.viewBag.cssClass}}" href="{{ item.url }}"><span>{{ item.title }}</span></a>
     {% endfor %}
+    <div class="container-header-info">
+        {% for post in posts %}
+        {{post.content_html|raw}}
+        {% endfor %}
+    </div>
 </div>

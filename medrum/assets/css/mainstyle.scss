@@ -10,7 +10,7 @@ main{
   @include flex-coldirection();
   @include justify-content-start();
   width: 100%;
-  height: 100vh;
+  height: auto;
   -webkit-animation: top 1s both;
   animation: top 1s both;
 
@@ -69,6 +69,10 @@ main{
    @include align-items-center();
    @include justify-content-end();
    padding-right: 4vw;
+   position: sticky;
+   top: 0;
+   right: 0;
+   z-index: 1000;
    @include mediaMaxW(768px){
     line-height: 1;
     @include justify-content-between();

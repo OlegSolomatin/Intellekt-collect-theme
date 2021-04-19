@@ -665,3 +665,18 @@ main{
   }
  }
 }
+
+.dock-wrapper-link{
+ @include flex();
+ @include align-items-center();
+ @include flex-coldirection();
+ color: white;
+ &:hover{
+  color: white;
+  transform: none;
+ }
+ p{
+  margin: 10px 0 0;
+  font-size: 12px;
+ }
+}
